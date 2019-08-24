@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<title>mvc567</title>
+        <link rel="stylesheet" href="~/assets/css/style.min.css"/>
+	</head>
+    <body>
+        <div id="app" v-cloak>
+            @RenderBody()
+        </div>
+        <vue-init />
+        @RenderSection("Vue", required: false)
+        <vue-import name="App" />
+    </body>
+</html>

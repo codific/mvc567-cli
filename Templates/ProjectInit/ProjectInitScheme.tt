@@ -1,0 +1,357 @@
+﻿{
+  "sheme": [
+    {
+      "type": "folder",
+      "name": "{{ProjectName}}",
+      "content": [
+        {
+          "type": "file",
+          "name": "{{ProjectName}}.sln",
+          "templateName": "ProjectSolutionTemplate"
+        },
+        {
+          "type": "folder",
+          "name": "src",
+          "content": [
+            {
+              "type": "folder",
+              "name": "{{ProjectName}}",
+              "content": [
+                {
+                  "type": "folder",
+                  "name": "Controllers",
+                  "content": [
+                    {
+                      "type": "folder",
+                      "name": "API"
+                    },
+                    {
+                      "type": "folder",
+                      "name": "MVC",
+                      "content": [
+                        {
+                          "type": "folder",
+                          "name": "Admin",
+                          "content": [
+                            {
+                              "type": "file",
+                              "name": "AdminDashboardController.cs",
+                              "templateName": "AdminDashboardControllerTemplate"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "HomeController.cs",
+                          "templateName": "HomeControllerTemplate"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "DataAccess",
+                  "content": [
+                    {
+                      "type": "file",
+                      "name": "EntityContext.cs",
+                      "templateName": "EntityContextTemplate"
+                    },
+                    {
+                      "type": "file",
+                      "name": "StandardRepository.cs",
+                      "templateName": "StandardRepositoryTemplate"
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "Migrations",
+                  "content": [
+
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "privateroot",
+                  "content": [
+                    {
+                      "type": "folder",
+                      "name": "uploads",
+                      "content": [
+                        {
+                          "type": "folder",
+                          "name": "global"
+                        },
+                        {
+                          "type": "folder",
+                          "name": "temp"
+                        },
+                        {
+                          "type": "folder",
+                          "name": "users"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "file",
+                      "name": "config.js",
+                      "templateName": "PrivateConfigTemplate"
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "Properties",
+                  "content": [
+                    {
+                      "type": "file",
+                      "name": "launchSettings.json",
+                      "templateName": "LaunchSettingsTemplate"
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "Scripts",
+                  "content": [
+                    {
+                      "type": "folder",
+                      "name": "VueComponents",
+                      "content": [
+                        {
+                          "type": "file",
+                          "name": "App.js",
+                          "templateName": "VueComponentAppTemplate"
+                        },
+                        {
+                          "type": "file",
+                          "name": "Home.js",
+                          "templateName": "VueComponentHomeTemplate"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "Styles",
+                  "content": [
+                    {
+                      "type": "folder",
+                      "name": "css",
+                      "content": [
+
+                      ]
+                    },
+                    {
+                      "type": "folder",
+                      "name": "scss",
+                      "content": [
+                        {
+                          "type": "file",
+                          "name": "_misc.scss",
+                          "templateName": "ScssMiscTemplate"
+                        },
+                        {
+                          "type": "file",
+                          "name": "_variables.scss",
+                          "templateName": "ScssVariablesTemplate"
+                        },
+                        {
+                          "type": "file",
+                          "name": "style.scss",
+                          "templateName": "ScssStyleTemplate"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "Views",
+                  "content": [
+                    {
+                      "type": "folder",
+                      "name": "AreasViews",
+                      "content": [
+                        {
+                          "type": "folder",
+                          "name": "Admin",
+                          "content": [
+                            {
+                              "type": "folder",
+                              "name": "AdminDashboard",
+                              "content": [
+                                {
+                                  "type": "file",
+                                  "name": "Index.cshtml",
+                                  "templateName": "AdminDashboardIndexViewTemplate"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "file",
+                              "name": "_ViewImports.cshtml",
+                              "templateName": "AdminAreaViewImportsTemplate"
+                            },
+                            {
+                              "type": "file",
+                              "name": "_ViewStart.cshtml",
+                              "templateName": "AdminAreaViewStartTemplate"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "folder",
+                      "name": "Components",
+                      "content": [
+                        {
+                          "type": "folder",
+                          "name": "Vue"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "folder",
+                      "name": "ControllersViews",
+                      "content": [
+                        {
+                          "type": "folder",
+                          "name": "Home",
+                          "content": [
+                            {
+                              "type": "file",
+                              "name": "Index.cshtml",
+                              "templateName": "HomeIndexViewTemplate"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "folder",
+                          "name": "Shared",
+                          "content": [
+                            {
+                              "type": "file",
+                              "name": "_Layout.cshtml",
+                              "templateName": "ViewLayoutTemplate"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "_ViewImports.cshtml",
+                          "templateName": "ViewImportsTemplate"
+                        },
+                        {
+                          "type": "file",
+                          "name": "_ViewStart.cshtml",
+                          "templateName": "ViewStartTemplate"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "folder",
+                      "name": "EmailViews"
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "wwwroot",
+                  "content": [
+                    {
+                      "type": "folder",
+                      "name": "assets",
+                      "content": [
+                        {
+                          "type": "folder",
+                          "name": "css"
+                        },
+                        {
+                          "type": "folder",
+                          "name": "images",
+                          "content": [
+
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "folder",
+                      "name": "content",
+                      "content": [
+                        {
+                          "type": "folder",
+                          "name": "global"
+                        },
+                        {
+                          "type": "folder",
+                          "name": "users"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "folder",
+                      "name": "locales",
+                      "content": [
+                        {
+                          "type": "file",
+                          "name": "en.json",
+                          "templateName": "EmptyJsonTemplate"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "{{ProjectName}}.csproj",
+                  "templateName": "ProjectFileTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "appsettings.json",
+                  "templateName": "AppSettingsTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "appsettings.Development.json",
+                  "templateName": "AppSettingsTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "adminmenus.json",
+                  "templateName": "AdminMenusTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "package.json",
+                  "templateName": "PackageJsonTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "gulpfile.js",
+                  "templateName": "GulpFileTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "Program.cs",
+                  "templateName": "ProgramTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "Startup.cs",
+                  "templateName": "StartupTemplate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

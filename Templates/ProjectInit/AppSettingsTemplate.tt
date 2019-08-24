@@ -1,0 +1,33 @@
+﻿{
+  "ProjectMetaInformation": {
+    "Name": "mvc567",
+    "Url": "https://mvc567.com/"
+  },
+  "ConnectionStrings": {
+    "DatabaseConnection": "Data Source=DATABASE_SERVER_NAME;Initial Catalog=DATABASE_NAME;Integrated Security=True"
+  },
+  "AdminLoginAuthenticator": {
+    "SecretKey": "",
+    "CookieFormat": "",
+    "SecretIndexes": ""
+  },
+  "GoogleRecaptchaKeys": {
+    "VisibleRecaptcha": {
+      "SiteKey": "",
+      "SecretKey": ""
+    },
+    "InvisibleRecaptcha": {
+      "SiteKey": "",
+      "SecretKey": ""
+    }
+  },
+  "Jwt": {
+    "Key": "RANDOM_JWT_KEY_USED_FOR_BEARER_AUTHORIZATION",
+    "Issuer": "https://localhost:44370/"
+  },
+  "RobotsTxt": [
+    "User-agent: *",
+    "Disallow: /admin",
+    "Sitemap: https://localhost:44370/sitemap.xml"
+  ]
+}

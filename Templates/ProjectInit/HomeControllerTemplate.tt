@@ -1,0 +1,29 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Mvc567.Controllers.Abstractions;
+using Mvc567.Services.Infrastructure;
+using Mvc567.Common;
+
+namespace <#=Session["ProjectName"]#>.Controllers.MVC
+{
+
+    [ApiExplorerSettings(IgnoreApi = true)]
+    public class HomeController : AbstractController
+    {
+        public HomeController(
+            IConfiguration configuration, 
+            IEmailService emailService, 
+            ILanguageService languageService)
+            : base(configuration, emailService, languageService)
+        {
+        }
+
+        [HttpGet]
+        [Route("/")]
+        [Route("/" + Constants.LanguageControllerPageRoute)]
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}

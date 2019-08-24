@@ -1,0 +1,53 @@
+﻿{
+  "GenericValidationRules": {
+    "MaxAllowedFileSize": 20971520,
+    "AllowedFormatExtensions": [
+      1705,
+      1706,
+      1703,
+      1707
+    ],
+    "AllowedMimeTypes": [
+      "image/jpg",
+      "image/jpeg",
+      "image/pjpeg",
+      "image/gif",
+      "image/x-png",
+      "image/png"
+    ]
+  },
+  "ImageValidationRules": {
+    "MaxAllowedFileSize": 10485760,
+    "AllowedFormatExtensions": [
+      1705,
+      1706,
+      1703,
+      1707
+    ],
+    "AllowedMimeTypes": [
+      "image/jpg",
+      "image/jpeg",
+      "image/pjpeg",
+      "image/gif",
+      "image/x-png",
+      "image/png"
+    ]
+  },
+  "VideoValidationRules": {
+    "MaxAllowedFileSize": 209715200,
+    "AllowedFormatExtensions": [
+      2309,
+      2303,
+      2308,
+      2304,
+      2315
+    ],
+    "AllowedMimeTypes": [
+      "video/x-flv",
+      "video/mp4",
+      "video/quicktime",
+      "video/x-msvideo",
+      "video/x-ms-wmv"
+    ]
+  }
+}

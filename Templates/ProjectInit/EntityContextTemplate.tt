@@ -1,0 +1,16 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Mvc567.DataAccess;
+
+namespace <#=Session["ProjectName"]#>.DataAccess
+{
+    public class EntityContext : AbstractDatabaseContext<EntityContext>
+    {
+        public EntityContext(DbContextOptions<EntityContext> options) : base(options)
+        { }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+    }
+}

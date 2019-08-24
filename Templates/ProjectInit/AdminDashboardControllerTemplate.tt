@@ -1,0 +1,35 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Mvc567.Common.Attributes;
+using Mvc567.Controllers.Abstractions;
+using Mvc567.DataAccess.Identity;
+using Mvc567.Services.Infrastructure;
+using System.Threading.Tasks;
+
+namespace <#=Session["ProjectName"]#>.Controllers.MVC.Admin
+{
+    [Area("Admin")]
+    [Route("admin")]
+    [ApiExplorerSettings(IgnoreApi = true)]
+    [ValidateAdminCookie]
+    [Authorize(Policy = ApplicationPermissions.AccessAdministrationPolicy)]
+    public class AdminDashboardController : AbstractController
+    {
+        public AdminDashboardController(
+            IConfiguration configuration, 
+            IEmailService emailService, 
+            ILanguageService languageService)
+            : base(configuration, emailService, languageService)
+        {
+        }
+
+        [HttpGet]
+        [ValidateAdminCookie]
+        public async virtual Task<IActionResult> Index()
+        {
+            return View();
+        }
+
+    }
+}

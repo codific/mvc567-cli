@@ -1,0 +1,12 @@
+﻿Vue.component('home', {
+    data: function () {
+        return {
+            platformName: 'mvc567'
+        };
+    },
+    template: `
+        <div>
+            <h1>Hello {{platformName}}</h1>
+        </div>
+`
+});

@@ -1,0 +1,140 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+	
+	<Company>Intellisoft567</Company>
+    <Product>mvc567 CLI</Product>
+    <PackageLicenseUrl>https://github.com/intellisoft567/mvc567-cli/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/intellisoft567/mvc567-cli</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/intellisoft567/mvc567-cli</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>mvc567 CLI is the official mvc567 project scaffolding engine.</Description>
+    <Authors>Georgi Karagogov</Authors>
+    <Copyright>Georgi Karagogov</Copyright>
+    <PackageTags>mvc567 CLI</PackageTags>
+	
+	<PackAsTool>true</PackAsTool>
+    <ToolCommandName>mvc567</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="System.CodeDom" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>mscorlib</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>System.Core</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\ProjectInit\AppSettingsTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppSettingsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\LaunchSettingsTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LaunchSettingsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\PrivateConfigTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PrivateConfigTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ProjectFileTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProjectFileTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ProjectSolutionTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProjectSolutionTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ScssMiscTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ScssMiscTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ScssStyleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ScssStyleTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ScssVariablesTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ScssVariablesTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\VueComponentAppTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VueComponentAppTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\VueComponentHomeTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VueComponentHomeTemplate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Templates\ProjectInit\AppSettingsTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AppSettingsTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\LaunchSettingsTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>LaunchSettingsTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\PrivateConfigTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>PrivateConfigTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ProjectFileTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ProjectFileTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ProjectSolutionTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ProjectSolutionTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ScssMiscTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScssMiscTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ScssStyleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScssStyleTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ScssVariablesTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ScssVariablesTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\VueComponentAppTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>VueComponentAppTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\VueComponentHomeTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>VueComponentHomeTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

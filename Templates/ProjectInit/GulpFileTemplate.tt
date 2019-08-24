@@ -1,0 +1,66 @@
+﻿/// <binding BeforeBuild='vue:build' />
+let gulp = require("gulp"),
+    uglify = require('gulp-uglify-es').default,
+    inject = require('gulp-inject-string'),
+    replace = require('gulp-replace'),
+    rename = require('gulp-rename'),
+    concat = require('gulp-concat'),
+    jsObfuscator = require('gulp-javascript-obfuscator'),
+    sass = require('gulp-sass'),
+    cssmin = require('gulp-cssmin');
+
+const componentsDirectory = 'Scripts/VueComponents/';
+const csHtmlResultDirectory = 'Views/Components/Vue';
+
+gulp.task('sass', function () {
+    return gulp.src('Styles/scss/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('Styles/css'));
+});
+
+gulp.task('min:css', ['sass'], function () {
+    return gulp.src('Styles/css/style.css')
+        .pipe(cssmin({ keepSpecialComments: 0 }))
+        .pipe(concat('style.min.css'))
+        .pipe(gulp.dest('wwwroot/assets/css'));
+});
+
+gulp.task('vue:vendors', function () {
+    return gulp.src([
+        'node_modules/vue/dist/vue.min.js',
+        'node_modules/vue-router/dist/vue-router.min.js',
+        'node_modules/axios/dist/axios.min.js',
+        'node_modules/vuelidate/dist/vuelidate.min.js',
+        'node_modules/vuelidate/dist/validators.min.js',
+        'node_modules/vue-cookies/vue-cookies.js',
+        'node_modules/vue-i18n/dist/vue-i18n.min.js'
+    ])
+        .pipe(uglify())
+        .pipe(inject.prepend('<script type="text/javascript">'))
+        .pipe(inject.append('</script>'))
+        .pipe(replace('@', '@@'))
+        .pipe(concat('_VueVendors.cshtml'))
+        .pipe(gulp.dest(csHtmlResultDirectory));
+});
+
+gulp.task('vue:components', function () {
+    return gulp.src(componentPath('*'))
+        .pipe(uglify())
+        .pipe(jsObfuscator())
+        .pipe(inject.prepend('<script type="text/javascript">(function(){"use strict";'))
+        .pipe(inject.append('})();</script>'))
+        .pipe(replace('@', '@@'))
+        .pipe(rename({
+            prefix: "_",
+            suffix: ".Vue",
+            extname: ".cshtml"
+        }))
+        .pipe(gulp.dest(csHtmlResultDirectory));
+});
+
+gulp.task('styles', ['min:css']);
+gulp.task('vue:build', ['vue:vendors', 'vue:components']);
+
+const componentPath = function (name = '*') {
+    return componentsDirectory + name + '.js';
+};

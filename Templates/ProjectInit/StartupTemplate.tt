@@ -1,0 +1,57 @@
+﻿using <#=Session["ProjectName"]#>.DataAccess;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Mvc567;
+using System.Reflection;
+
+namespace <#=Session["ProjectName"]#>
+{
+    public class Startup : ApplicationStartup<EntityContext, StandardRepository>
+    {
+        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment) : base(configuration, hostingEnvironment)
+        {
+            this.applicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
+        }
+
+        protected override void RegisterServices(ref IServiceCollection services)
+        {
+            base.RegisterServices(ref services);
+        }
+
+        protected override void AddAuthorizationOptions(ref AuthorizationOptions options)
+        {
+            base.AddAuthorizationOptions(ref options);
+        }
+
+        protected override void ConfigureMiddlewareBeforeAuthentication(ref IApplicationBuilder app)
+        {
+            base.ConfigureMiddlewareBeforeAuthentication(ref app);
+        }
+
+        protected override void ConfigureMiddlewareAfterAuthentication(ref IApplicationBuilder app)
+        {
+            base.ConfigureMiddlewareAfterAuthentication(ref app);
+        }
+
+        protected override void RegisterMappingProfiles(ref IMapperConfigurationExpression configuration)
+        {
+            base.RegisterMappingProfiles(ref configuration);
+        }
+
+        protected override void RegisterFeatureProviders(ref ApplicationPartManager applicationPartManager)
+        {
+            base.RegisterFeatureProviders(ref applicationPartManager);
+        }
+
+        protected override void RegisterRoutes(ref IRouteBuilder routes)
+        {
+            base.RegisterRoutes(ref routes);
+        }
+    }
+}

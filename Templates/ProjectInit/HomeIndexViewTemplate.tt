@@ -1,0 +1,7 @@
+﻿<div>
+    <home></home>
+</div>
+
+@section Vue{
+    <vue-import name="Home" />
+}

@@ -1,0 +1,12 @@
+﻿using Mvc567.DataAccess.Abstraction.Repositories;
+
+namespace <#=Session["ProjectName"]#>.DataAccess
+{
+    public class StandardRepository : StandardRepository<EntityContext>
+    {
+        public StandardRepository(EntityContext context) : base(context)
+        {
+
+        }
+    }
+}

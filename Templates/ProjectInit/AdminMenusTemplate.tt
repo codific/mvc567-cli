@@ -1,0 +1,106 @@
+﻿{
+  "navigation": [
+    {
+      "title": "Dashboard",
+      "controller": "AdminDashboard",
+      "action": "Index",
+      "area": "Admin",
+      "single": true,
+      "icon": "mdi mdi-television"
+    },
+    {
+      "title": "Roots",
+      "controller": "AdminRoots",
+      "single": false,
+      "icon": "mdi mdi-folder-open",
+      "children": [
+        {
+          "title": "Public Root",
+          "action": "PublicRoot",
+          "controller": "AdminRoots",
+          "area": "Admin"
+        },
+        {
+          "title": "Private Root",
+          "action": "PrivateRoot",
+          "controller": "AdminRoots",
+          "area": "Admin"
+        }
+      ]
+    },
+    {
+      "title": "Static Pages",
+      "controller": "AdminStaticPages",
+      "single": false,
+      "icon": "mdi mdi-web",
+      "children": [
+        {
+          "title": "All Pages",
+          "action": "GetAll",
+          "controller": "AdminStaticPages",
+          "area": "Admin"
+        }
+      ]
+    },
+    {
+      "title": "Users",
+      "controller": "AdminUsers",
+      "single": false,
+      "icon": "mdi mdi-account",
+      "children": [
+        {
+          "title": "All Users",
+          "action": "GetAll",
+          "controller": "AdminUsers",
+          "area": "Admin"
+        }
+      ]
+    },
+    {
+      "title": "SEO",
+      "controller": "AdminSitemapPatterns",
+      "single": false,
+      "icon": "mdi mdi-search-web",
+      "children": [
+        {
+          "title": "Sitemap Patterns",
+          "action": "GetAll",
+          "controller": "AdminSitemapPatterns",
+          "area": "Admin"
+        }
+      ]
+    },
+    {
+      "title": "System",
+      "controller": "AdminSystem",
+      "single": false,
+      "icon": "mdi mdi-settings",
+      "children": [
+        {
+          "title": "Languages",
+          "action": "GetAll",
+          "controller": "AdminLanguages",
+          "area": "Admin"
+        },
+        {
+          "title": "Swagger",
+          "action": "Swagger",
+          "controller": "AdminSystem",
+          "area": "Admin"
+        },
+        {
+          "title": "Logs",
+          "action": "GetAll",
+          "controller": "AdminLogs",
+          "area": "Admin"
+        },
+        {
+          "title": "Constants",
+          "action": "GetAll",
+          "controller": "AdminSystemConstants",
+          "area": "Admin"
+        }
+      ]
+    }
+  ]
+}

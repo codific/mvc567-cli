@@ -1,0 +1,3 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Mvc567.Common
+@addTagHelper *, Mvc567.Components
