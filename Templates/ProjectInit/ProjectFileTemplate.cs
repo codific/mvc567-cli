@@ -15,7 +15,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\ProjectFileTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\ProjectFileTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ProjectFileTemplate : ProjectFileTemplateBase
     {
@@ -35,11 +35,11 @@ namespace Mvc567.Cli.Templates.ProjectInit
   <ItemGroup>
     <PackageReference Include=""Microsoft.AspNetCore.App"" />
     <PackageReference Include=""Microsoft.AspNetCore.Razor.Design"" Version=""2.2.0"" PrivateAssets=""All"" />
-    <PackageReference Include=""Mvc567"" Version=""1.0.0"" />
-    <PackageReference Include=""Mvc567.Services"" Version=""1.0.0"" />
-    <PackageReference Include=""Mvc567.Common"" Version=""1.0.0"" />
-    <PackageReference Include=""Mvc567.DataAccess"" Version=""1.0.0"" />
-    <PackageReference Include=""Mvc567.Components"" Version=""1.0.0"" />
+    <PackageReference Include=""Mvc567"" Version=""1.*"" />
+    <PackageReference Include=""Mvc567.Services"" Version=""1.*"" />
+    <PackageReference Include=""Mvc567.Common"" Version=""1.*"" />
+    <PackageReference Include=""Mvc567.DataAccess"" Version=""1.*"" />
+    <PackageReference Include=""Mvc567.Components"" Version=""1.*"" />
   </ItemGroup>
 
 </Project>

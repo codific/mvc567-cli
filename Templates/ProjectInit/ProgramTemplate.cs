@@ -15,7 +15,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\ProgramTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\ProgramTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ProgramTemplate : ProgramTemplateBase
     {
@@ -29,7 +29,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
                     "using Microsoft.Extensions.DependencyInjection;\r\nusing Mvc567.Seed;\r\n\r\nnamespace" +
                     " ");
             
-            #line 7 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\ProgramTemplate.tt"
+            #line 7 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\ProgramTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             
             #line default

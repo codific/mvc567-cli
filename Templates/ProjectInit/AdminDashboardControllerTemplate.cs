@@ -15,7 +15,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\AdminDashboardControllerTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\AdminDashboardControllerTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class AdminDashboardControllerTemplate : AdminDashboardControllerTemplateBase
     {
@@ -36,7 +36,7 @@ using System.Threading.Tasks;
 
 namespace ");
             
-            #line 10 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\AdminDashboardControllerTemplate.tt"
+            #line 10 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\AdminDashboardControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             
             #line default

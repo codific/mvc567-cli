@@ -18,9 +18,9 @@
 	<PackAsTool>true</PackAsTool>
     <ToolCommandName>mvc567</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <Version>1.0.2</Version>
     <PackageIconUrl>https://cdn.gsk567.com/external/mvc567/assets/images/icon128.png</PackageIconUrl>
   </PropertyGroup>
 
@@ -46,25 +46,90 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Templates\ProjectInit\AdminAreaViewImportsTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AdminAreaViewImportsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\AdminAreaViewStartTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AdminAreaViewStartTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\AdminDashboardControllerTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AdminDashboardControllerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\AdminDashboardIndexViewTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AdminDashboardIndexViewTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\AdminMenusTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AdminMenusTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\ProjectInit\AppSettingsTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>AppSettingsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\EmptyJsonTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EmptyJsonTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\EntityContextTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EntityContextTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\GulpFileTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GulpFileTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\HomeControllerTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HomeControllerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\HomeIndexViewTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HomeIndexViewTemplate.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\ProjectInit\LaunchSettingsTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>LaunchSettingsTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\ProjectInit\PackageJsonTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PackageJsonTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\ProjectInit\PrivateConfigTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>PrivateConfigTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\ProjectInit\ProgramTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProgramTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\ProjectInit\ProjectFileTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ProjectFileTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ProjectInitScheme.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProjectInitScheme.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\ProjectInit\ProjectSolutionTemplate.cs">
       <DesignTime>True</DesignTime>
@@ -86,6 +151,31 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ScssVariablesTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\ProjectInit\StandardRepositoryTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StandardRepositoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\StartupTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StartupTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ViewImportsTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ViewImportsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ViewLayoutTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ViewLayoutTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\ViewStartTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ViewStartTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\ProjectInit\VueComponentAppTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -99,21 +189,75 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Templates\ProjectInit\AdminAreaViewImportsTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AdminAreaViewImportsTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\AdminAreaViewStartTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AdminAreaViewStartTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\AdminDashboardControllerTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AdminDashboardControllerTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\AdminDashboardIndexViewTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AdminDashboardIndexViewTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\AdminMenusTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AdminMenusTemplate.cs</LastGenOutput>
+    </None>
     <None Update="Templates\ProjectInit\AppSettingsTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AppSettingsTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\EmptyJsonTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>EmptyJsonTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\EntityContextTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>EntityContextTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\GulpFileTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>GulpFileTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\HomeControllerTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>HomeControllerTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\HomeIndexViewTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>HomeIndexViewTemplate.cs</LastGenOutput>
     </None>
     <None Update="Templates\ProjectInit\LaunchSettingsTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>LaunchSettingsTemplate.cs</LastGenOutput>
     </None>
+    <None Update="Templates\ProjectInit\PackageJsonTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>PackageJsonTemplate.cs</LastGenOutput>
+    </None>
     <None Update="Templates\ProjectInit\PrivateConfigTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>PrivateConfigTemplate.cs</LastGenOutput>
     </None>
+    <None Update="Templates\ProjectInit\ProgramTemplate.tt">
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ProgramTemplate.cs</LastGenOutput>
+    </None>
     <None Update="Templates\ProjectInit\ProjectFileTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ProjectFileTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ProjectInitScheme.tt">
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ProjectInitScheme.cs</LastGenOutput>
     </None>
     <None Update="Templates\ProjectInit\ProjectSolutionTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
@@ -130,6 +274,26 @@
     <None Update="Templates\ProjectInit\ScssVariablesTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ScssVariablesTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\StandardRepositoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>StandardRepositoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\StartupTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>StartupTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ViewImportsTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewImportsTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ViewLayoutTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewLayoutTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\ViewStartTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewStartTemplate.cs</LastGenOutput>
     </None>
     <None Update="Templates\ProjectInit\VueComponentAppTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>

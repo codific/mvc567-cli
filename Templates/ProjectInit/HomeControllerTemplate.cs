@@ -15,7 +15,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\HomeControllerTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\HomeControllerTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class HomeControllerTemplate : HomeControllerTemplateBase
     {
@@ -29,7 +29,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
                     " Mvc567.Controllers.Abstractions;\r\nusing Mvc567.Services.Infrastructure;\r\nusing " +
                     "Mvc567.Common;\r\n\r\nnamespace ");
             
-            #line 7 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\HomeControllerTemplate.tt"
+            #line 7 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\HomeControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             
             #line default

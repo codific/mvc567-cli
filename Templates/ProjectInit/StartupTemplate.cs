@@ -15,7 +15,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\StartupTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\StartupTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class StartupTemplate : StartupTemplateBase
     {
@@ -27,7 +27,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
         {
             this.Write("using ");
             
-            #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\StartupTemplate.tt"
+            #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\StartupTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             
             #line default
@@ -46,7 +46,7 @@ using System.Reflection;
 
 namespace ");
             
-            #line 13 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\StartupTemplate.tt"
+            #line 13 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\StartupTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             
             #line default

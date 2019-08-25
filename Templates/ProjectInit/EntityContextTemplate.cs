@@ -15,7 +15,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\EntityContextTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\EntityContextTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class EntityContextTemplate : EntityContextTemplateBase
     {
@@ -27,7 +27,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
         {
             this.Write("using Microsoft.EntityFrameworkCore;\r\nusing Mvc567.DataAccess;\r\n\r\nnamespace ");
             
-            #line 4 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\EntityContextTemplate.tt"
+            #line 4 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\EntityContextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             
             #line default

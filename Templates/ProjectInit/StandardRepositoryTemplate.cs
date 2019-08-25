@@ -15,7 +15,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\StandardRepositoryTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\StandardRepositoryTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class StandardRepositoryTemplate : StandardRepositoryTemplateBase
     {
@@ -27,7 +27,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
         {
             this.Write("using Mvc567.DataAccess.Abstraction.Repositories;\r\n\r\nnamespace ");
             
-            #line 3 "D:\mvc567-cli\Mvc567.Cli\Templates\ProjectInit\StandardRepositoryTemplate.tt"
+            #line 3 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\StandardRepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             
             #line default
