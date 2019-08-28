@@ -96,7 +96,7 @@
                     },
                     {
                       "type": "file",
-                      "name": "config.js",
+                      "name": "config.json",
                       "templateName": "PrivateConfigTemplate"
                     }
                   ]

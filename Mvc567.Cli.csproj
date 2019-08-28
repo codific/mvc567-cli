@@ -18,9 +18,9 @@
 	<PackAsTool>true</PackAsTool>
     <ToolCommandName>mvc567</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+    <Version>1.0.3</Version>
     <PackageIconUrl>https://cdn.gsk567.com/external/mvc567/assets/images/icon128.png</PackageIconUrl>
   </PropertyGroup>
 

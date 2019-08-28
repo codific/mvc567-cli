@@ -65,121 +65,121 @@ namespace Mvc567.Cli.Templates.ProjectInit
                     "     {\r\n                          \"type\": \"folder\",\r\n                          \"" +
                     "name\": \"users\"\r\n                        }\r\n                      ]\r\n            " +
                     "        },\r\n                    {\r\n                      \"type\": \"file\",\r\n      " +
-                    "                \"name\": \"config.js\",\r\n                      \"templateName\": \"Pri" +
-                    "vateConfigTemplate\"\r\n                    }\r\n                  ]\r\n               " +
-                    " },\r\n                {\r\n                  \"type\": \"folder\",\r\n                  \"" +
-                    "name\": \"Properties\",\r\n                  \"content\": [\r\n                    {\r\n   " +
-                    "                   \"type\": \"file\",\r\n                      \"name\": \"launchSetting" +
-                    "s.json\",\r\n                      \"templateName\": \"LaunchSettingsTemplate\"\r\n      " +
-                    "              }\r\n                  ]\r\n                },\r\n                {\r\n   " +
-                    "               \"type\": \"folder\",\r\n                  \"name\": \"Scripts\",\r\n        " +
-                    "          \"content\": [\r\n                    {\r\n                      \"type\": \"fo" +
-                    "lder\",\r\n                      \"name\": \"VueComponents\",\r\n                      \"c" +
-                    "ontent\": [\r\n                        {\r\n                          \"type\": \"file\"," +
-                    "\r\n                          \"name\": \"App.js\",\r\n                          \"templa" +
-                    "teName\": \"VueComponentAppTemplate\"\r\n                        },\r\n                " +
-                    "        {\r\n                          \"type\": \"file\",\r\n                          " +
-                    "\"name\": \"Home.js\",\r\n                          \"templateName\": \"VueComponentHomeT" +
-                    "emplate\"\r\n                        }\r\n                      ]\r\n                  " +
-                    "  }\r\n                  ]\r\n                },\r\n                {\r\n               " +
-                    "   \"type\": \"folder\",\r\n                  \"name\": \"Styles\",\r\n                  \"co" +
-                    "ntent\": [\r\n                    {\r\n                      \"type\": \"folder\",\r\n     " +
-                    "                 \"name\": \"css\",\r\n                      \"content\": [\r\n\r\n         " +
-                    "             ]\r\n                    },\r\n                    {\r\n                 " +
-                    "     \"type\": \"folder\",\r\n                      \"name\": \"scss\",\r\n                 " +
-                    "     \"content\": [\r\n                        {\r\n                          \"type\": " +
-                    "\"file\",\r\n                          \"name\": \"_misc.scss\",\r\n                      " +
-                    "    \"templateName\": \"ScssMiscTemplate\"\r\n                        },\r\n            " +
-                    "            {\r\n                          \"type\": \"file\",\r\n                      " +
-                    "    \"name\": \"_variables.scss\",\r\n                          \"templateName\": \"ScssV" +
-                    "ariablesTemplate\"\r\n                        },\r\n                        {\r\n      " +
-                    "                    \"type\": \"file\",\r\n                          \"name\": \"style.sc" +
-                    "ss\",\r\n                          \"templateName\": \"ScssStyleTemplate\"\r\n           " +
-                    "             }\r\n                      ]\r\n                    }\r\n                " +
-                    "  ]\r\n                },\r\n                {\r\n                  \"type\": \"folder\",\r" +
-                    "\n                  \"name\": \"Views\",\r\n                  \"content\": [\r\n           " +
+                    "                \"name\": \"config.json\",\r\n                      \"templateName\": \"P" +
+                    "rivateConfigTemplate\"\r\n                    }\r\n                  ]\r\n             " +
+                    "   },\r\n                {\r\n                  \"type\": \"folder\",\r\n                 " +
+                    " \"name\": \"Properties\",\r\n                  \"content\": [\r\n                    {\r\n " +
+                    "                     \"type\": \"file\",\r\n                      \"name\": \"launchSetti" +
+                    "ngs.json\",\r\n                      \"templateName\": \"LaunchSettingsTemplate\"\r\n    " +
+                    "                }\r\n                  ]\r\n                },\r\n                {\r\n " +
+                    "                 \"type\": \"folder\",\r\n                  \"name\": \"Scripts\",\r\n      " +
+                    "            \"content\": [\r\n                    {\r\n                      \"type\": \"" +
+                    "folder\",\r\n                      \"name\": \"VueComponents\",\r\n                      " +
+                    "\"content\": [\r\n                        {\r\n                          \"type\": \"file" +
+                    "\",\r\n                          \"name\": \"App.js\",\r\n                          \"temp" +
+                    "lateName\": \"VueComponentAppTemplate\"\r\n                        },\r\n              " +
+                    "          {\r\n                          \"type\": \"file\",\r\n                        " +
+                    "  \"name\": \"Home.js\",\r\n                          \"templateName\": \"VueComponentHom" +
+                    "eTemplate\"\r\n                        }\r\n                      ]\r\n                " +
+                    "    }\r\n                  ]\r\n                },\r\n                {\r\n             " +
+                    "     \"type\": \"folder\",\r\n                  \"name\": \"Styles\",\r\n                  \"" +
+                    "content\": [\r\n                    {\r\n                      \"type\": \"folder\",\r\n   " +
+                    "                   \"name\": \"css\",\r\n                      \"content\": [\r\n\r\n       " +
+                    "               ]\r\n                    },\r\n                    {\r\n               " +
+                    "       \"type\": \"folder\",\r\n                      \"name\": \"scss\",\r\n               " +
+                    "       \"content\": [\r\n                        {\r\n                          \"type\"" +
+                    ": \"file\",\r\n                          \"name\": \"_misc.scss\",\r\n                    " +
+                    "      \"templateName\": \"ScssMiscTemplate\"\r\n                        },\r\n          " +
+                    "              {\r\n                          \"type\": \"file\",\r\n                    " +
+                    "      \"name\": \"_variables.scss\",\r\n                          \"templateName\": \"Scs" +
+                    "sVariablesTemplate\"\r\n                        },\r\n                        {\r\n    " +
+                    "                      \"type\": \"file\",\r\n                          \"name\": \"style." +
+                    "scss\",\r\n                          \"templateName\": \"ScssStyleTemplate\"\r\n         " +
+                    "               }\r\n                      ]\r\n                    }\r\n              " +
+                    "    ]\r\n                },\r\n                {\r\n                  \"type\": \"folder\"" +
+                    ",\r\n                  \"name\": \"Views\",\r\n                  \"content\": [\r\n         " +
+                    "           {\r\n                      \"type\": \"folder\",\r\n                      \"na" +
+                    "me\": \"AreasViews\",\r\n                      \"content\": [\r\n                        " +
+                    "{\r\n                          \"type\": \"folder\",\r\n                          \"name\"" +
+                    ": \"Admin\",\r\n                          \"content\": [\r\n                            " +
+                    "{\r\n                              \"type\": \"folder\",\r\n                            " +
+                    "  \"name\": \"AdminDashboard\",\r\n                              \"content\": [\r\n       " +
+                    "                         {\r\n                                  \"type\": \"file\",\r\n " +
+                    "                                 \"name\": \"Index.cshtml\",\r\n                      " +
+                    "            \"templateName\": \"AdminDashboardIndexViewTemplate\"\r\n                 " +
+                    "               }\r\n                              ]\r\n                            }" +
+                    ",\r\n                            {\r\n                              \"type\": \"file\",\r" +
+                    "\n                              \"name\": \"_ViewImports.cshtml\",\r\n                 " +
+                    "             \"templateName\": \"AdminAreaViewImportsTemplate\"\r\n                   " +
+                    "         },\r\n                            {\r\n                              \"type\"" +
+                    ": \"file\",\r\n                              \"name\": \"_ViewStart.cshtml\",\r\n         " +
+                    "                     \"templateName\": \"AdminAreaViewStartTemplate\"\r\n             " +
+                    "               }\r\n                          ]\r\n                        }\r\n      " +
+                    "                ]\r\n                    },\r\n                    {\r\n              " +
+                    "        \"type\": \"folder\",\r\n                      \"name\": \"Components\",\r\n        " +
+                    "              \"content\": [\r\n                        {\r\n                         " +
+                    " \"type\": \"folder\",\r\n                          \"name\": \"Vue\"\r\n                   " +
+                    "     }\r\n                      ]\r\n                    },\r\n                    {\r\n" +
+                    "                      \"type\": \"folder\",\r\n                      \"name\": \"Controll" +
+                    "ersViews\",\r\n                      \"content\": [\r\n                        {\r\n     " +
+                    "                     \"type\": \"folder\",\r\n                          \"name\": \"Home\"" +
+                    ",\r\n                          \"content\": [\r\n                            {\r\n      " +
+                    "                        \"type\": \"file\",\r\n                              \"name\": \"" +
+                    "Index.cshtml\",\r\n                              \"templateName\": \"HomeIndexViewTemp" +
+                    "late\"\r\n                            }\r\n                          ]\r\n             " +
+                    "           },\r\n                        {\r\n                          \"type\": \"fol" +
+                    "der\",\r\n                          \"name\": \"Shared\",\r\n                          \"c" +
+                    "ontent\": [\r\n                            {\r\n                              \"type\":" +
+                    " \"file\",\r\n                              \"name\": \"_Layout.cshtml\",\r\n             " +
+                    "                 \"templateName\": \"ViewLayoutTemplate\"\r\n                         " +
+                    "   }\r\n                          ]\r\n                        },\r\n                 " +
+                    "       {\r\n                          \"type\": \"file\",\r\n                          \"" +
+                    "name\": \"_ViewImports.cshtml\",\r\n                          \"templateName\": \"ViewIm" +
+                    "portsTemplate\"\r\n                        },\r\n                        {\r\n         " +
+                    "                 \"type\": \"file\",\r\n                          \"name\": \"_ViewStart." +
+                    "cshtml\",\r\n                          \"templateName\": \"ViewStartTemplate\"\r\n       " +
+                    "                 }\r\n                      ]\r\n                    },\r\n           " +
                     "         {\r\n                      \"type\": \"folder\",\r\n                      \"name" +
-                    "\": \"AreasViews\",\r\n                      \"content\": [\r\n                        {\r" +
-                    "\n                          \"type\": \"folder\",\r\n                          \"name\": " +
-                    "\"Admin\",\r\n                          \"content\": [\r\n                            {\r" +
-                    "\n                              \"type\": \"folder\",\r\n                              " +
-                    "\"name\": \"AdminDashboard\",\r\n                              \"content\": [\r\n         " +
-                    "                       {\r\n                                  \"type\": \"file\",\r\n   " +
-                    "                               \"name\": \"Index.cshtml\",\r\n                        " +
-                    "          \"templateName\": \"AdminDashboardIndexViewTemplate\"\r\n                   " +
-                    "             }\r\n                              ]\r\n                            },\r" +
-                    "\n                            {\r\n                              \"type\": \"file\",\r\n " +
-                    "                             \"name\": \"_ViewImports.cshtml\",\r\n                   " +
-                    "           \"templateName\": \"AdminAreaViewImportsTemplate\"\r\n                     " +
-                    "       },\r\n                            {\r\n                              \"type\": " +
-                    "\"file\",\r\n                              \"name\": \"_ViewStart.cshtml\",\r\n           " +
-                    "                   \"templateName\": \"AdminAreaViewStartTemplate\"\r\n               " +
-                    "             }\r\n                          ]\r\n                        }\r\n        " +
-                    "              ]\r\n                    },\r\n                    {\r\n                " +
-                    "      \"type\": \"folder\",\r\n                      \"name\": \"Components\",\r\n          " +
-                    "            \"content\": [\r\n                        {\r\n                          \"" +
-                    "type\": \"folder\",\r\n                          \"name\": \"Vue\"\r\n                     " +
-                    "   }\r\n                      ]\r\n                    },\r\n                    {\r\n  " +
-                    "                    \"type\": \"folder\",\r\n                      \"name\": \"Controller" +
-                    "sViews\",\r\n                      \"content\": [\r\n                        {\r\n       " +
-                    "                   \"type\": \"folder\",\r\n                          \"name\": \"Home\",\r" +
-                    "\n                          \"content\": [\r\n                            {\r\n        " +
-                    "                      \"type\": \"file\",\r\n                              \"name\": \"In" +
-                    "dex.cshtml\",\r\n                              \"templateName\": \"HomeIndexViewTempla" +
-                    "te\"\r\n                            }\r\n                          ]\r\n               " +
-                    "         },\r\n                        {\r\n                          \"type\": \"folde" +
-                    "r\",\r\n                          \"name\": \"Shared\",\r\n                          \"con" +
-                    "tent\": [\r\n                            {\r\n                              \"type\": \"" +
-                    "file\",\r\n                              \"name\": \"_Layout.cshtml\",\r\n               " +
-                    "               \"templateName\": \"ViewLayoutTemplate\"\r\n                           " +
-                    " }\r\n                          ]\r\n                        },\r\n                   " +
-                    "     {\r\n                          \"type\": \"file\",\r\n                          \"na" +
-                    "me\": \"_ViewImports.cshtml\",\r\n                          \"templateName\": \"ViewImpo" +
-                    "rtsTemplate\"\r\n                        },\r\n                        {\r\n           " +
-                    "               \"type\": \"file\",\r\n                          \"name\": \"_ViewStart.cs" +
-                    "html\",\r\n                          \"templateName\": \"ViewStartTemplate\"\r\n         " +
-                    "               }\r\n                      ]\r\n                    },\r\n             " +
-                    "       {\r\n                      \"type\": \"folder\",\r\n                      \"name\":" +
-                    " \"EmailViews\"\r\n                    }\r\n                  ]\r\n                },\r\n " +
-                    "               {\r\n                  \"type\": \"folder\",\r\n                  \"name\":" +
-                    " \"wwwroot\",\r\n                  \"content\": [\r\n                    {\r\n            " +
-                    "          \"type\": \"folder\",\r\n                      \"name\": \"assets\",\r\n          " +
-                    "            \"content\": [\r\n                        {\r\n                          \"" +
-                    "type\": \"folder\",\r\n                          \"name\": \"css\"\r\n                     " +
-                    "   },\r\n                        {\r\n                          \"type\": \"folder\",\r\n " +
-                    "                         \"name\": \"images\",\r\n                          \"content\":" +
-                    " [\r\n\r\n                          ]\r\n                        }\r\n                  " +
-                    "    ]\r\n                    },\r\n                    {\r\n                      \"typ" +
-                    "e\": \"folder\",\r\n                      \"name\": \"content\",\r\n                      \"" +
-                    "content\": [\r\n                        {\r\n                          \"type\": \"folde" +
-                    "r\",\r\n                          \"name\": \"global\"\r\n                        },\r\n   " +
-                    "                     {\r\n                          \"type\": \"folder\",\r\n           " +
-                    "               \"name\": \"users\"\r\n                        }\r\n                     " +
-                    " ]\r\n                    },\r\n                    {\r\n                      \"type\":" +
-                    " \"folder\",\r\n                      \"name\": \"locales\",\r\n                      \"con" +
-                    "tent\": [\r\n                        {\r\n                          \"type\": \"file\",\r\n" +
-                    "                          \"name\": \"en.json\",\r\n                          \"templat" +
-                    "eName\": \"EmptyJsonTemplate\"\r\n                        }\r\n                      ]\r" +
-                    "\n                    }\r\n                  ]\r\n                },\r\n               " +
-                    " {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"{{ProjectName}" +
-                    "}.csproj\",\r\n                  \"templateName\": \"ProjectFileTemplate\"\r\n           " +
+                    "\": \"EmailViews\"\r\n                    }\r\n                  ]\r\n                },\r" +
+                    "\n                {\r\n                  \"type\": \"folder\",\r\n                  \"name" +
+                    "\": \"wwwroot\",\r\n                  \"content\": [\r\n                    {\r\n          " +
+                    "            \"type\": \"folder\",\r\n                      \"name\": \"assets\",\r\n        " +
+                    "              \"content\": [\r\n                        {\r\n                         " +
+                    " \"type\": \"folder\",\r\n                          \"name\": \"css\"\r\n                   " +
+                    "     },\r\n                        {\r\n                          \"type\": \"folder\",\r" +
+                    "\n                          \"name\": \"images\",\r\n                          \"content" +
+                    "\": [\r\n\r\n                          ]\r\n                        }\r\n                " +
+                    "      ]\r\n                    },\r\n                    {\r\n                      \"t" +
+                    "ype\": \"folder\",\r\n                      \"name\": \"content\",\r\n                     " +
+                    " \"content\": [\r\n                        {\r\n                          \"type\": \"fol" +
+                    "der\",\r\n                          \"name\": \"global\"\r\n                        },\r\n " +
+                    "                       {\r\n                          \"type\": \"folder\",\r\n         " +
+                    "                 \"name\": \"users\"\r\n                        }\r\n                   " +
+                    "   ]\r\n                    },\r\n                    {\r\n                      \"type" +
+                    "\": \"folder\",\r\n                      \"name\": \"locales\",\r\n                      \"c" +
+                    "ontent\": [\r\n                        {\r\n                          \"type\": \"file\"," +
+                    "\r\n                          \"name\": \"en.json\",\r\n                          \"templ" +
+                    "ateName\": \"EmptyJsonTemplate\"\r\n                        }\r\n                      " +
+                    "]\r\n                    }\r\n                  ]\r\n                },\r\n             " +
+                    "   {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"{{ProjectNam" +
+                    "e}}.csproj\",\r\n                  \"templateName\": \"ProjectFileTemplate\"\r\n         " +
+                    "       },\r\n                {\r\n                  \"type\": \"file\",\r\n               " +
+                    "   \"name\": \"appsettings.json\",\r\n                  \"templateName\": \"AppSettingsTe" +
+                    "mplate\"\r\n                },\r\n                {\r\n                  \"type\": \"file\"" +
+                    ",\r\n                  \"name\": \"appsettings.Development.json\",\r\n                  " +
+                    "\"templateName\": \"AppSettingsTemplate\"\r\n                },\r\n                {\r\n  " +
+                    "                \"type\": \"file\",\r\n                  \"name\": \"adminmenus.json\",\r\n " +
+                    "                 \"templateName\": \"AdminMenusTemplate\"\r\n                },\r\n     " +
+                    "           {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"pack" +
+                    "age.json\",\r\n                  \"templateName\": \"PackageJsonTemplate\"\r\n           " +
                     "     },\r\n                {\r\n                  \"type\": \"file\",\r\n                 " +
-                    " \"name\": \"appsettings.json\",\r\n                  \"templateName\": \"AppSettingsTemp" +
+                    " \"name\": \"gulpfile.js\",\r\n                  \"templateName\": \"GulpFileTemplate\"\r\n " +
+                    "               },\r\n                {\r\n                  \"type\": \"file\",\r\n       " +
+                    "           \"name\": \"Program.cs\",\r\n                  \"templateName\": \"ProgramTemp" +
                     "late\"\r\n                },\r\n                {\r\n                  \"type\": \"file\",\r" +
-                    "\n                  \"name\": \"appsettings.Development.json\",\r\n                  \"t" +
-                    "emplateName\": \"AppSettingsTemplate\"\r\n                },\r\n                {\r\n    " +
-                    "              \"type\": \"file\",\r\n                  \"name\": \"adminmenus.json\",\r\n   " +
-                    "               \"templateName\": \"AdminMenusTemplate\"\r\n                },\r\n       " +
-                    "         {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"packag" +
-                    "e.json\",\r\n                  \"templateName\": \"PackageJsonTemplate\"\r\n             " +
-                    "   },\r\n                {\r\n                  \"type\": \"file\",\r\n                  \"" +
-                    "name\": \"gulpfile.js\",\r\n                  \"templateName\": \"GulpFileTemplate\"\r\n   " +
-                    "             },\r\n                {\r\n                  \"type\": \"file\",\r\n         " +
-                    "         \"name\": \"Program.cs\",\r\n                  \"templateName\": \"ProgramTempla" +
-                    "te\"\r\n                },\r\n                {\r\n                  \"type\": \"file\",\r\n " +
-                    "                 \"name\": \"Startup.cs\",\r\n                  \"templateName\": \"Start" +
-                    "upTemplate\"\r\n                }\r\n              ]\r\n            }\r\n          ]\r\n   " +
-                    "     }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n");
+                    "\n                  \"name\": \"Startup.cs\",\r\n                  \"templateName\": \"Sta" +
+                    "rtupTemplate\"\r\n                }\r\n              ]\r\n            }\r\n          ]\r\n " +
+                    "       }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
