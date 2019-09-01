@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Mvc567.Cli.Templates.ProjectInit
+namespace Mvc567.Cli.Templates.VueComponent
 {
     using System;
     
@@ -15,9 +15,9 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\ProjectInit\ProjectFileTemplate.tt"
+    #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\VueComponent\VueComponentTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
-    public partial class ProjectFileTemplate : ProjectFileTemplateBase
+    public partial class VueComponentTemplate : VueComponentTemplateBase
     {
 #line hidden
         /// <summary>
@@ -25,27 +25,16 @@ namespace Mvc567.Cli.Templates.ProjectInit
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write(@"<Project Sdk=""Microsoft.NET.Sdk.Web"">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include=""AutoMapper"" Version=""9.0.0"" />
-    <PackageReference Include=""Microsoft.AspNetCore.App"" />
-    <PackageReference Include=""Microsoft.AspNetCore.Razor.Design"" Version=""2.2.0"" PrivateAssets=""All"" />
-    <PackageReference Include=""Mvc567"" Version=""*"" />
-    <PackageReference Include=""Mvc567.Services"" Version=""*"" />
-    <PackageReference Include=""Mvc567.Common"" Version=""*"" />
-    <PackageReference Include=""Mvc567.DataAccess"" Version=""*"" />
-    <PackageReference Include=""Mvc567.Components"" Version=""*"" />
-    <PackageReference Include=""Newtonsoft.Json"" Version=""12.0.2"" />
-  </ItemGroup>
-
-</Project>
-");
+            this.Write("Vue.component(\'");
+            
+            #line 1 "D:\GitHubWorkspace\mvc567-cli\Templates\VueComponent\VueComponentTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ComponentNameKebapCase"]));
+            
+            #line default
+            #line hidden
+            this.Write("\', {\r\n    data: function () {\r\n        return {\r\n            message: \'I am gener" +
+                    "ated component\'\r\n        };\r\n    },\r\n    template: `\r\n        <div>\r\n           " +
+                    " <p>{{message}}</p>\r\n        </div>\r\n`\r\n});");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -57,7 +46,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
-    public class ProjectFileTemplateBase
+    public class VueComponentTemplateBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

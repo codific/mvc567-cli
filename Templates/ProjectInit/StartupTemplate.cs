@@ -55,23 +55,25 @@ namespace ");
                     "ory>\r\n    {\r\n        public Startup(IConfiguration configuration, IHostingEnviro" +
                     "nment hostingEnvironment) : base(configuration, hostingEnvironment)\r\n        {\r\n" +
                     "            this.applicationAssembly = Assembly.GetExecutingAssembly().GetName()" +
-                    ".Name;\r\n        }\r\n\r\n        protected override void RegisterServices(ref IServi" +
-                    "ceCollection services)\r\n        {\r\n            base.RegisterServices(ref service" +
-                    "s);\r\n        }\r\n\r\n        protected override void AddAuthorizationOptions(ref Au" +
-                    "thorizationOptions options)\r\n        {\r\n            base.AddAuthorizationOptions" +
-                    "(ref options);\r\n        }\r\n\r\n        protected override void ConfigureMiddleware" +
-                    "BeforeAuthentication(ref IApplicationBuilder app)\r\n        {\r\n            base.C" +
-                    "onfigureMiddlewareBeforeAuthentication(ref app);\r\n        }\r\n\r\n        protected" +
-                    " override void ConfigureMiddlewareAfterAuthentication(ref IApplicationBuilder ap" +
-                    "p)\r\n        {\r\n            base.ConfigureMiddlewareAfterAuthentication(ref app);" +
-                    "\r\n        }\r\n\r\n        protected override void RegisterMappingProfiles(ref IMapp" +
-                    "erConfigurationExpression configuration)\r\n        {\r\n            base.RegisterMa" +
-                    "ppingProfiles(ref configuration);\r\n        }\r\n\r\n        protected override void " +
-                    "RegisterFeatureProviders(ref ApplicationPartManager applicationPartManager)\r\n   " +
-                    "     {\r\n            base.RegisterFeatureProviders(ref applicationPartManager);\r\n" +
-                    "        }\r\n\r\n        protected override void RegisterRoutes(ref IRouteBuilder ro" +
-                    "utes)\r\n        {\r\n            base.RegisterRoutes(ref routes);\r\n        }\r\n    }" +
-                    "\r\n}");
+                    ".Name;\r\n        }\r\n\r\n        protected override void RegisterDbContext(ref IServ" +
+                    "iceCollection services)\r\n        {\r\n            base.RegisterDbContext(ref servi" +
+                    "ces);\r\n        }\r\n\r\n        protected override void RegisterServices(ref IServic" +
+                    "eCollection services)\r\n        {\r\n            base.RegisterServices(ref services" +
+                    ");\r\n        }\r\n\r\n        protected override void AddAuthorizationOptions(ref Aut" +
+                    "horizationOptions options)\r\n        {\r\n            base.AddAuthorizationOptions(" +
+                    "ref options);\r\n        }\r\n\r\n        protected override void ConfigureMiddlewareB" +
+                    "eforeAuthentication(ref IApplicationBuilder app)\r\n        {\r\n            base.Co" +
+                    "nfigureMiddlewareBeforeAuthentication(ref app);\r\n        }\r\n\r\n        protected " +
+                    "override void ConfigureMiddlewareAfterAuthentication(ref IApplicationBuilder app" +
+                    ")\r\n        {\r\n            base.ConfigureMiddlewareAfterAuthentication(ref app);\r" +
+                    "\n        }\r\n\r\n        protected override void RegisterMappingProfiles(ref IMappe" +
+                    "rConfigurationExpression configuration)\r\n        {\r\n            base.RegisterMap" +
+                    "pingProfiles(ref configuration);\r\n        }\r\n\r\n        protected override void R" +
+                    "egisterFeatureProviders(ref ApplicationPartManager applicationPartManager)\r\n    " +
+                    "    {\r\n            base.RegisterFeatureProviders(ref applicationPartManager);\r\n " +
+                    "       }\r\n\r\n        protected override void RegisterRoutes(ref IRouteBuilder rou" +
+                    "tes)\r\n        {\r\n            base.RegisterRoutes(ref routes);\r\n        }\r\n    }\r" +
+                    "\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

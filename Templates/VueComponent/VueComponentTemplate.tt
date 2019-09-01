@@ -1,0 +1,12 @@
+﻿Vue.component('<#=Session["ComponentNameKebapCase"]#>', {
+    data: function () {
+        return {
+            message: 'I am generated component'
+        };
+    },
+    template: `
+        <div>
+            <p>{{message}}</p>
+        </div>
+`
+});

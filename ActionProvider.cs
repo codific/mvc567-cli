@@ -33,7 +33,8 @@ namespace Mvc567.Cli
 
             this.commandFactories = new Dictionary<string, CommandFactory>
             {
-                { CommandsNames.ProjectInit, new ProjectInitFactory() }
+                { CommandsNames.ProjectInit, new ProjectInitFactory() },
+                { CommandsNames.VueComponent, new VueComponentFactory() }
             };
         }
 
@@ -72,6 +73,7 @@ namespace Mvc567.Cli
             Console.WriteLine();
             Console.WriteLine("Commands:");
             Console.WriteLine("init -n projectName");
+            Console.WriteLine("vue-component -n componentName");
             Console.WriteLine();
         }
 

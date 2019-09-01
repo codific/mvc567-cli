@@ -19,10 +19,12 @@ namespace Mvc567.Cli.Commands
     internal static class CommandsNames
     {
         internal static string ProjectInit = "init";
+        internal static string VueComponent = "vue-component";
 
         internal static readonly string[] CommandList = new string[]
         {
-            ProjectInit
+            ProjectInit,
+            VueComponent
         };
     }
 }

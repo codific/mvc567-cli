@@ -19,6 +19,11 @@ namespace <#=Session["ProjectName"]#>
             this.applicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
         }
 
+        protected override void RegisterDbContext(ref IServiceCollection services)
+        {
+            base.RegisterDbContext(ref services);
+        }
+
         protected override void RegisterServices(ref IServiceCollection services)
         {
             base.RegisterServices(ref services);

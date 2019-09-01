@@ -20,5 +20,6 @@ namespace Mvc567.Cli.Commands
     {
         internal static string ProjectName = "-n";
         internal static string SaveDirectory = "-d";
+        internal static string ComponentName = "-n";
     }
 }
