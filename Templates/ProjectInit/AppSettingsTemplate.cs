@@ -52,6 +52,15 @@ namespace Mvc567.Cli.Templates.ProjectInit
     ""Key"": ""RANDOM_JWT_KEY_USED_FOR_BEARER_AUTHORIZATION"",
     ""Issuer"": ""https://localhost:44370/""
   },
+  ""SmtpConfig"": {
+    ""Host"": """",
+    ""Port"": """",
+    ""UseSSL"": false,
+    ""Name"": """",
+    ""Username"": """",
+    ""EmailAddress"": """",
+    ""Password"": """"
+  },
   ""RobotsTxt"": [
     ""User-agent: *"",
     ""Disallow: /admin"",
