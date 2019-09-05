@@ -36,7 +36,8 @@ namespace Mvc567.Cli.Templates.ProjectInit
   ""AdminLoginAuthenticator"": {
     ""SecretKey"": """",
     ""CookieFormat"": """",
-    ""SecretIndexes"": """"
+    ""SecretIndexes"": """",
+    ""ShowForTestPurposes"": false
   },
   ""GoogleRecaptchaKeys"": {
     ""VisibleRecaptcha"": {

@@ -9,7 +9,8 @@
   "AdminLoginAuthenticator": {
     "SecretKey": "",
     "CookieFormat": "",
-    "SecretIndexes": ""
+    "SecretIndexes": "",
+    "ShowForTestPurposes": false
   },
   "GoogleRecaptchaKeys": {
     "VisibleRecaptcha": {

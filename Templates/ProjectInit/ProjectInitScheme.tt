@@ -236,7 +236,7 @@
                           "content": [
                             {
                               "type": "file",
-                              "name": "_Layout.cshtml",
+                              "name": "_BaseLayout.cshtml",
                               "templateName": "ViewLayoutTemplate"
                             }
                           ]

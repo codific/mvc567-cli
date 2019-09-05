@@ -31,6 +31,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
 		<meta name=""viewport"" content=""width=device-width"" />
 		<title>mvc567</title>
         <link rel=""stylesheet"" href=""~/assets/css/style.min.css""/>
+		@RenderSection(""Head"", required: false)
 	</head>
     <body>
         <div id=""app"" v-cloak>

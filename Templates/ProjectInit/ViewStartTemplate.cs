@@ -25,7 +25,7 @@ namespace Mvc567.Cli.Templates.ProjectInit
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("@{\r\n    Layout = \"_Layout\";\r\n}");
+            this.Write("@{\r\n    Layout = \"_BaseLayout\";\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

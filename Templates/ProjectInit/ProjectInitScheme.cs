@@ -130,56 +130,56 @@ namespace Mvc567.Cli.Templates.ProjectInit
                     "           },\r\n                        {\r\n                          \"type\": \"fol" +
                     "der\",\r\n                          \"name\": \"Shared\",\r\n                          \"c" +
                     "ontent\": [\r\n                            {\r\n                              \"type\":" +
-                    " \"file\",\r\n                              \"name\": \"_Layout.cshtml\",\r\n             " +
-                    "                 \"templateName\": \"ViewLayoutTemplate\"\r\n                         " +
-                    "   }\r\n                          ]\r\n                        },\r\n                 " +
-                    "       {\r\n                          \"type\": \"file\",\r\n                          \"" +
-                    "name\": \"_ViewImports.cshtml\",\r\n                          \"templateName\": \"ViewIm" +
-                    "portsTemplate\"\r\n                        },\r\n                        {\r\n         " +
-                    "                 \"type\": \"file\",\r\n                          \"name\": \"_ViewStart." +
-                    "cshtml\",\r\n                          \"templateName\": \"ViewStartTemplate\"\r\n       " +
-                    "                 }\r\n                      ]\r\n                    },\r\n           " +
-                    "         {\r\n                      \"type\": \"folder\",\r\n                      \"name" +
-                    "\": \"EmailViews\"\r\n                    }\r\n                  ]\r\n                },\r" +
-                    "\n                {\r\n                  \"type\": \"folder\",\r\n                  \"name" +
-                    "\": \"wwwroot\",\r\n                  \"content\": [\r\n                    {\r\n          " +
-                    "            \"type\": \"folder\",\r\n                      \"name\": \"assets\",\r\n        " +
-                    "              \"content\": [\r\n                        {\r\n                         " +
-                    " \"type\": \"folder\",\r\n                          \"name\": \"css\"\r\n                   " +
-                    "     },\r\n                        {\r\n                          \"type\": \"folder\",\r" +
-                    "\n                          \"name\": \"images\",\r\n                          \"content" +
-                    "\": [\r\n\r\n                          ]\r\n                        }\r\n                " +
-                    "      ]\r\n                    },\r\n                    {\r\n                      \"t" +
-                    "ype\": \"folder\",\r\n                      \"name\": \"content\",\r\n                     " +
-                    " \"content\": [\r\n                        {\r\n                          \"type\": \"fol" +
-                    "der\",\r\n                          \"name\": \"global\"\r\n                        },\r\n " +
-                    "                       {\r\n                          \"type\": \"folder\",\r\n         " +
-                    "                 \"name\": \"users\"\r\n                        }\r\n                   " +
-                    "   ]\r\n                    },\r\n                    {\r\n                      \"type" +
-                    "\": \"folder\",\r\n                      \"name\": \"locales\",\r\n                      \"c" +
-                    "ontent\": [\r\n                        {\r\n                          \"type\": \"file\"," +
-                    "\r\n                          \"name\": \"en.json\",\r\n                          \"templ" +
-                    "ateName\": \"EmptyJsonTemplate\"\r\n                        }\r\n                      " +
-                    "]\r\n                    }\r\n                  ]\r\n                },\r\n             " +
-                    "   {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"{{ProjectNam" +
-                    "e}}.csproj\",\r\n                  \"templateName\": \"ProjectFileTemplate\"\r\n         " +
-                    "       },\r\n                {\r\n                  \"type\": \"file\",\r\n               " +
-                    "   \"name\": \"appsettings.json\",\r\n                  \"templateName\": \"AppSettingsTe" +
-                    "mplate\"\r\n                },\r\n                {\r\n                  \"type\": \"file\"" +
-                    ",\r\n                  \"name\": \"appsettings.Development.json\",\r\n                  " +
-                    "\"templateName\": \"AppSettingsTemplate\"\r\n                },\r\n                {\r\n  " +
-                    "                \"type\": \"file\",\r\n                  \"name\": \"adminmenus.json\",\r\n " +
-                    "                 \"templateName\": \"AdminMenusTemplate\"\r\n                },\r\n     " +
-                    "           {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"pack" +
-                    "age.json\",\r\n                  \"templateName\": \"PackageJsonTemplate\"\r\n           " +
-                    "     },\r\n                {\r\n                  \"type\": \"file\",\r\n                 " +
-                    " \"name\": \"gulpfile.js\",\r\n                  \"templateName\": \"GulpFileTemplate\"\r\n " +
-                    "               },\r\n                {\r\n                  \"type\": \"file\",\r\n       " +
-                    "           \"name\": \"Program.cs\",\r\n                  \"templateName\": \"ProgramTemp" +
-                    "late\"\r\n                },\r\n                {\r\n                  \"type\": \"file\",\r" +
-                    "\n                  \"name\": \"Startup.cs\",\r\n                  \"templateName\": \"Sta" +
-                    "rtupTemplate\"\r\n                }\r\n              ]\r\n            }\r\n          ]\r\n " +
-                    "       }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n");
+                    " \"file\",\r\n                              \"name\": \"_BaseLayout.cshtml\",\r\n         " +
+                    "                     \"templateName\": \"ViewLayoutTemplate\"\r\n                     " +
+                    "       }\r\n                          ]\r\n                        },\r\n             " +
+                    "           {\r\n                          \"type\": \"file\",\r\n                       " +
+                    "   \"name\": \"_ViewImports.cshtml\",\r\n                          \"templateName\": \"Vi" +
+                    "ewImportsTemplate\"\r\n                        },\r\n                        {\r\n     " +
+                    "                     \"type\": \"file\",\r\n                          \"name\": \"_ViewSt" +
+                    "art.cshtml\",\r\n                          \"templateName\": \"ViewStartTemplate\"\r\n   " +
+                    "                     }\r\n                      ]\r\n                    },\r\n       " +
+                    "             {\r\n                      \"type\": \"folder\",\r\n                      \"" +
+                    "name\": \"EmailViews\"\r\n                    }\r\n                  ]\r\n               " +
+                    " },\r\n                {\r\n                  \"type\": \"folder\",\r\n                  \"" +
+                    "name\": \"wwwroot\",\r\n                  \"content\": [\r\n                    {\r\n      " +
+                    "                \"type\": \"folder\",\r\n                      \"name\": \"assets\",\r\n    " +
+                    "                  \"content\": [\r\n                        {\r\n                     " +
+                    "     \"type\": \"folder\",\r\n                          \"name\": \"css\"\r\n               " +
+                    "         },\r\n                        {\r\n                          \"type\": \"folde" +
+                    "r\",\r\n                          \"name\": \"images\",\r\n                          \"con" +
+                    "tent\": [\r\n\r\n                          ]\r\n                        }\r\n            " +
+                    "          ]\r\n                    },\r\n                    {\r\n                    " +
+                    "  \"type\": \"folder\",\r\n                      \"name\": \"content\",\r\n                 " +
+                    "     \"content\": [\r\n                        {\r\n                          \"type\": " +
+                    "\"folder\",\r\n                          \"name\": \"global\"\r\n                        }" +
+                    ",\r\n                        {\r\n                          \"type\": \"folder\",\r\n     " +
+                    "                     \"name\": \"users\"\r\n                        }\r\n               " +
+                    "       ]\r\n                    },\r\n                    {\r\n                      \"" +
+                    "type\": \"folder\",\r\n                      \"name\": \"locales\",\r\n                    " +
+                    "  \"content\": [\r\n                        {\r\n                          \"type\": \"fi" +
+                    "le\",\r\n                          \"name\": \"en.json\",\r\n                          \"t" +
+                    "emplateName\": \"EmptyJsonTemplate\"\r\n                        }\r\n                  " +
+                    "    ]\r\n                    }\r\n                  ]\r\n                },\r\n         " +
+                    "       {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"{{Projec" +
+                    "tName}}.csproj\",\r\n                  \"templateName\": \"ProjectFileTemplate\"\r\n     " +
+                    "           },\r\n                {\r\n                  \"type\": \"file\",\r\n           " +
+                    "       \"name\": \"appsettings.json\",\r\n                  \"templateName\": \"AppSettin" +
+                    "gsTemplate\"\r\n                },\r\n                {\r\n                  \"type\": \"f" +
+                    "ile\",\r\n                  \"name\": \"appsettings.Development.json\",\r\n              " +
+                    "    \"templateName\": \"AppSettingsTemplate\"\r\n                },\r\n                {" +
+                    "\r\n                  \"type\": \"file\",\r\n                  \"name\": \"adminmenus.json\"" +
+                    ",\r\n                  \"templateName\": \"AdminMenusTemplate\"\r\n                },\r\n " +
+                    "               {\r\n                  \"type\": \"file\",\r\n                  \"name\": \"" +
+                    "package.json\",\r\n                  \"templateName\": \"PackageJsonTemplate\"\r\n       " +
+                    "         },\r\n                {\r\n                  \"type\": \"file\",\r\n             " +
+                    "     \"name\": \"gulpfile.js\",\r\n                  \"templateName\": \"GulpFileTemplate" +
+                    "\"\r\n                },\r\n                {\r\n                  \"type\": \"file\",\r\n   " +
+                    "               \"name\": \"Program.cs\",\r\n                  \"templateName\": \"Program" +
+                    "Template\"\r\n                },\r\n                {\r\n                  \"type\": \"fil" +
+                    "e\",\r\n                  \"name\": \"Startup.cs\",\r\n                  \"templateName\": " +
+                    "\"StartupTemplate\"\r\n                }\r\n              ]\r\n            }\r\n          " +
+                    "]\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
