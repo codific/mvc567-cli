@@ -1,0 +1,29 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Mvc567.Cli.Commands.CommandFactories" #>
+<#@ import namespace="System.Collections.Generic" #>
+using AutoMapper;
+using Mvc567.Common.Attributes;
+using Mvc567.Common.Enums;
+using Mvc567.Entities.ViewModels.Abstractions;
+using <#=Session["EntityNamespace"]#>;
+using System;
+
+namespace <#=Session["DtoNamespace"]#>
+{
+    [AutoMap(typeof(DocumentationSection), ReverseMap = true)]
+    public class <#=Session["EntityName"]#>Dto : CreateEditEntityViewModel
+    {
+        [EntityIdentifier]
+        [DetailsOrder(0)]
+        public string Id { get; set; }
+<# foreach (var property in (List<EntityDtoClassProperty>)Session["Properties"]) { #>
+
+        <#= ((EntityDtoClassProperty)property).DatabaseEnumAttribute #>
+<# if (((EntityDtoClassProperty)property).ShowAttributes) { #>        <#= ((EntityDtoClassProperty)property).DetailsAttribute #>
+        <#= ((EntityDtoClassProperty)property).TableViewAttribute #>
+        <#= ((EntityDtoClassProperty)property).CreateEditAttribute #> <# } #> 
+        public <#= ((EntityDtoClassProperty)property).Type #> <#= ((EntityDtoClassProperty)property).Name #> { get; set; } 
+<# } #>
+        
+    }
+}

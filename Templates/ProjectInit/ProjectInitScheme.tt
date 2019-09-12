@@ -6,6 +6,11 @@
       "content": [
         {
           "type": "file",
+          "name": "cli-config.json",
+          "templateName": "CliConfigTemplate"
+        },
+        {
+          "type": "file",
           "name": "{{ProjectName}}.sln",
           "templateName": "ProjectSolutionTemplate"
         },

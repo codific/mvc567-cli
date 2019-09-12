@@ -22,5 +22,6 @@ namespace Mvc567.Cli.Commands
         internal static string SaveDirectory = "-d";
         internal static string ComponentName = "-n";
         internal static string Entity = "-e";
+
     }
 }

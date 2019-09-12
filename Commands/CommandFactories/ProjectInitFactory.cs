@@ -25,7 +25,6 @@ namespace Mvc567.Cli.Commands.CommandFactories
 {
     internal class ProjectInitFactory : CommandFactory
     {
-        private Dictionary<string, object> sessionDictionary;
         private string templateNamespace = "Mvc567.Cli.Templates.ProjectInit";
 
         internal override void Execute(Dictionary<string, string> parameters)
@@ -42,14 +41,21 @@ namespace Mvc567.Cli.Commands.CommandFactories
             }
         }
 
-        private void InitSessionDictionary(string projectName)
+        protected override void InitSessionDictionary(params object[] args)
         {
+            string directorySeparator = Path.DirectorySeparatorChar.ToString();
+            if (directorySeparator == @"\")
+            {
+                directorySeparator = @"\\";
+            }
+
             this.sessionDictionary = new Dictionary<string, object>
             {
-                { "ProjectName", projectName },
+                { "ProjectName", args[0] },
                 { "ProjectGuid", Guid.NewGuid().ToString().ToUpper() },
                 { "MainProjectGuid", Guid.NewGuid().ToString().ToUpper() },
                 { "SolutionGuid", Guid.NewGuid().ToString().ToUpper() },
+                { "DirectorySeparator", directorySeparator }
             };
         }
 

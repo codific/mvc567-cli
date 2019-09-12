@@ -1,0 +1,7 @@
+﻿{
+	"ProjectName": "<#=Session["ProjectName"]#>",
+	"EntityDirectory": "src<#=Session["DirectorySeparator"]#><#=Session["ProjectName"]#><#=Session["DirectorySeparator"]#>Entities<#=Session["DirectorySeparator"]#>",
+	"DtoEntityDirectory": "src<#=Session["DirectorySeparator"]#><#=Session["ProjectName"]#><#=Session["DirectorySeparator"]#>DataTransferObjects<#=Session["DirectorySeparator"]#>Entities<#=Session["DirectorySeparator"]#>",
+	"EntityNamespace": "<#=Session["ProjectName"]#>.Entities",
+	"DtoEntityNamespace": "<#=Session["ProjectName"]#>.DataTransferObjects.Entities"
+}

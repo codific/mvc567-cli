@@ -16,14 +16,15 @@
 	<PackAsTool>true</PackAsTool>
     <ToolCommandName>mvc567</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <AssemblyVersion>1.0.10.0</AssemblyVersion>
-    <FileVersion>1.0.10.0</FileVersion>
-    <Version>1.0.10</Version>
+    <AssemblyVersion>1.0.11.0</AssemblyVersion>
+    <FileVersion>1.0.11.0</FileVersion>
+    <Version>1.0.11</Version>
     <PackageIconUrl>https://cdn.gsk567.com/external/mvc567/assets/images/icon128.png</PackageIconUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.2.1" />
     <PackageReference Include="Mvc567.Common" Version="1.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="System.CodeDom" Version="4.5.0" />
@@ -46,6 +47,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Templates\EntityDto\EntityDtoTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EntityDtoTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\ProjectInit\AdminAreaViewImportsTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -75,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>AppSettingsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\ProjectInit\CliConfigTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CliConfigTemplate.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\ProjectInit\EmptyJsonTemplate.cs">
       <DesignTime>True</DesignTime>
@@ -194,6 +205,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Templates\EntityDto\EntityDtoTemplate.tt">
+      <LastGenOutput>EntityDtoTemplate.cs</LastGenOutput>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+    </None>
     <None Update="Templates\ProjectInit\AdminAreaViewImportsTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AdminAreaViewImportsTemplate.cs</LastGenOutput>
@@ -217,6 +232,10 @@
     <None Update="Templates\ProjectInit\AppSettingsTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AppSettingsTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\ProjectInit\CliConfigTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>CliConfigTemplate.cs</LastGenOutput>
     </None>
     <None Update="Templates\ProjectInit\EmptyJsonTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>

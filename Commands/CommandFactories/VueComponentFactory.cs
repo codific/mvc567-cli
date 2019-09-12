@@ -25,9 +25,6 @@ namespace Mvc567.Cli.Commands.CommandFactories
 {
     internal class VueComponentFactory : CommandFactory
     {
-        private Dictionary<string, object> sessionDictionary;
-        private string templateNamespace = "Mvc567.Cli.Templates.VueComponent";
-
         internal override void Execute(Dictionary<string, string> parameters)
         {
             if (parameters.ContainsKey(CommandParameters.ComponentName) && !string.IsNullOrWhiteSpace(parameters[CommandParameters.ComponentName]))
@@ -68,17 +65,18 @@ namespace Mvc567.Cli.Commands.CommandFactories
             }
         }
 
-        private void InitSessionDictionary(string componentName)
+        protected override void InitSessionDictionary(params object[] args)
         {
-            string componentNameKebapCase = StringFunctions.SplitWordsByCapitalLetters(componentName)
-                                               .Replace(" ", "-")
-                                               .ToLower();
+            string componentNameKebapCase = StringFunctions.SplitWordsByCapitalLetters(args[0].ToString())
+                                   .Replace(" ", "-")
+                                   .ToLower();
 
             this.sessionDictionary = new Dictionary<string, object>
             {
-                { "ComponentName", componentName },
+                { "ComponentName", args[0] },
                 { "ComponentNameKebapCase", componentNameKebapCase }
             };
         }
+
     }
 }
