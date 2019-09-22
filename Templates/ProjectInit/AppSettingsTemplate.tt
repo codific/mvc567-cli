@@ -28,7 +28,7 @@
   },
   "SmtpConfig": {
     "Host": "",
-    "Port": "",
+    "Port": 8888,
     "UseSSL": false,
     "Name": "",
     "Username": "",
