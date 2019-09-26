@@ -10,7 +10,7 @@ using System;
 
 namespace <#=Session["DtoNamespace"]#>
 {
-    [AutoMap(typeof(DocumentationSection), ReverseMap = true)]
+    [AutoMap(typeof(<#=Session["EntityName"]#>), ReverseMap = true)]
     public class <#=Session["EntityName"]#>Dto : CreateEditEntityViewModel
     {
         [EntityIdentifier]

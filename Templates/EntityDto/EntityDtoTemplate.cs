@@ -42,8 +42,14 @@ namespace Mvc567.Cli.Templates.EntityDto
             
             #line default
             #line hidden
-            this.Write("\r\n{\r\n    [AutoMap(typeof(DocumentationSection), ReverseMap = true)]\r\n    public c" +
-                    "lass ");
+            this.Write("\r\n{\r\n    [AutoMap(typeof(");
+            
+            #line 13 "D:\GitHubWorkspace\mvc567-cli\Templates\EntityDto\EntityDtoTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Session["EntityName"]));
+            
+            #line default
+            #line hidden
+            this.Write("), ReverseMap = true)]\r\n    public class ");
             
             #line 14 "D:\GitHubWorkspace\mvc567-cli\Templates\EntityDto\EntityDtoTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["EntityName"]));
