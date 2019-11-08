@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Mvc567.Cli.Templates.VueComponent
+namespace Codific.Mvc567.Cli.Templates.VueComponent
 {
     using System;
     

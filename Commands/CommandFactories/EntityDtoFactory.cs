@@ -1,5 +1,5 @@
 ﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Georgi Karagogov
+// Copyright (C) 2019 Codific Ltd.
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,8 +17,8 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Mvc567.Cli.Templates;
-using Mvc567.Cli.Templates.EntityDto;
+using Codific.Mvc567.Cli.Templates;
+using Codific.Mvc567.Cli.Templates.EntityDto;
 using Mvc567.Common.Enums;
 using Mvc567.Common.Utilities;
 using System;
@@ -26,7 +26,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Mvc567.Cli.Commands.CommandFactories
+namespace Codific.Mvc567.Cli.Commands.CommandFactories
 {
     internal class EntityDtoFactory : CommandFactory
     {

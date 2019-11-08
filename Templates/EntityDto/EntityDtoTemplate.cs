@@ -7,9 +7,9 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Mvc567.Cli.Templates.EntityDto
+namespace Codific.Mvc567.Cli.Templates.EntityDto
 {
-    using Mvc567.Cli.Commands.CommandFactories;
+    using Codific.Mvc567.Cli.Commands.CommandFactories;
     using System.Collections.Generic;
     using System;
     

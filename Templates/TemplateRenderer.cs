@@ -1,5 +1,5 @@
 ﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Georgi Karagogov
+// Copyright (C) 2019 Codific Ltd.
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Mvc567.Cli.Templates
+namespace Codific.Mvc567.Cli.Templates
 {
     internal static class TemplateRenderer
     {

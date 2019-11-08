@@ -1,5 +1,5 @@
 ﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Georgi Karagogov
+// Copyright (C) 2019 Codific Ltd.
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-namespace Mvc567.Cli.Commands
+namespace Codific.Mvc567.Cli.Commands
 {
     internal static class CommandsNames
     {
