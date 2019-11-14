@@ -25,7 +25,7 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
 {
     internal class ProjectInitFactory : CommandFactory
     {
-        private string templateNamespace = "Mvc567.Cli.Templates.ProjectInit";
+        private string templateNamespace = "Codific.Mvc567.Cli.Templates.ProjectInit";
 
         internal override void Execute(Dictionary<string, string> parameters)
         {
