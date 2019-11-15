@@ -39,7 +39,7 @@ namespace Codific.Mvc567.Cli.Templates.Scaffolding
                         CreateContentRootPath(contentRootPath, projectName, item.Name);
                     }
 
-                    projectName = projectName.ToString().Substring(0, 1).ToUpper() + projectName.ToString().Substring(1);
+                    projectName = projectName.Substring(0, 1).ToUpper() + projectName.Substring(1);
                     CreateRootPathsRecursively(contentRootPath, folderPath, item.Content, projectName, templatesNamespace, sessionDictionary);
                 }
                 else if (item.Type == SchemeItemType.File)
