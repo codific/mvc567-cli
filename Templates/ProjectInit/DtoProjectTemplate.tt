@@ -11,10 +11,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Codific.Mvc567" Version="*" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\<#=Session["ProjectName"]#>.Entities\<#=Session["ProjectName"]#>.Entities.csproj" />
       <ProjectReference Include="..\<#=Session["ProjectName"]#>.Shared\<#=Session["ProjectName"]#>.Shared.csproj" />
     </ItemGroup>

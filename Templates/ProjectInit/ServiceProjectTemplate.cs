@@ -22,7 +22,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
             this.Write(@"<Project Sdk=""Microsoft.NET.Sdk.Web"">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
         <OutputType>Library</OutputType>
     </PropertyGroup>
 
