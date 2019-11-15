@@ -1,5 +1,5 @@
-﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Codific Ltd.
+﻿// This file is part of the codific567 CLI distribution (https://codific.com).
+// Copyright (C) 2019 Codific
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -19,8 +19,8 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Codific.Mvc567.Cli.Templates;
 using Codific.Mvc567.Cli.Templates.EntityDto;
-using Mvc567.Common.Enums;
-using Mvc567.Common.Utilities;
+using Codific.Mvc567.Common.Enums;
+using Codific.Mvc567.Common.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,6 +30,9 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
 {
     internal class EntityDtoFactory : CommandFactory
     {
+
+        private static readonly string[] ExcludedFiles = { "AbstractEntityContext", "IReferenceModel" };
+        
         internal override void Execute(Dictionary<string, string> parameters)
         {
             if (parameters.ContainsKey(CommandParameters.Entity) && !string.IsNullOrWhiteSpace(parameters[CommandParameters.Entity]))
@@ -42,32 +45,34 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
                 }
                 string entityName = parameters[CommandParameters.Entity];
                 string entityClassString = GetEntityClassString(entityName, CliConfig.EntityDirectory);
-
+               
                 if (string.IsNullOrEmpty(entityClassString))
                 {
                     Console.WriteLine("Selected entity does not exist.");
                     return;
                 }
-                var classProperties = GetClassProperties(entityClassString);
-                var classDtoProperties = MapEntitiesToEntitiesDtos(classProperties);
-
-                InitSessionDictionary(entityName, CliConfig.EntityNamespace, CliConfig.DtoEntityNamespace, classDtoProperties);
-
-                string dtoContent = TemplateRenderer.RenderTemplate(typeof(EntityDtoTemplate), this.sessionDictionary);
-                string[] dtoContentArray = dtoContent.Split(Environment.NewLine);
-                List<string> dtoContentList = new List<string>();
-                for (int i = 0; i < dtoContentArray.Length; i++)
+              
+                SaveDtoFile($"{entityName}Dto.cs", GetDtoFileContents(entityName, entityClassString));
+            }
+            else if (parameters.ContainsKey(CommandParameters.AllEntities) && !string.IsNullOrWhiteSpace(parameters[CommandParameters.AllEntities]))
+            {
+                LoadCliConfig();
+                if (CliConfig == null)
                 {
-                    if (i > 0 && string.IsNullOrWhiteSpace(dtoContentArray[i]) && string.IsNullOrWhiteSpace(dtoContentArray[i - 1]))
-                    {
-                        continue;
-                    }
-
-                    dtoContentList.Add(dtoContentArray[i]);
+                    Console.WriteLine("This command requires cli-config.json");
+                    return;
                 }
-
-                string resultDtoContent = string.Join(Environment.NewLine, dtoContentList);
-                SaveDtoFile($"{entityName}Dto.cs", resultDtoContent);
+                string[] files = Directory.GetFiles(CliConfig.EntityDirectory, "*.cs", SearchOption.TopDirectoryOnly);
+                foreach (string fileName in files)
+                {
+                    string entityName = Path.GetFileName(fileName).Replace(".cs", "");
+                    if (!ExcludedFiles.Contains(entityName))
+                    {
+                        string entityClassString = GetEntityClassString(entityName, CliConfig.EntityDirectory);
+                        SaveDtoFile($"{entityName}Dto.cs", GetDtoFileContents(entityName, entityClassString), true);
+                    }
+                }
+                Console.WriteLine("All DTOs are created successfully!");
             }
             else
             {
@@ -75,7 +80,30 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
             }
         }
 
-        private void SaveDtoFile(string name, string content)
+        private string GetDtoFileContents(string entityName, string entityClassString)
+        {
+            var classProperties = GetClassProperties(entityClassString);
+            var classDtoProperties = MapEntitiesToEntitiesDtos(classProperties);
+
+            InitSessionDictionary(entityName, CliConfig.EntityNamespace, CliConfig.DtoEntityNamespace, classDtoProperties);
+
+            string dtoContent = TemplateRenderer.RenderTemplate(typeof(EntityDtoTemplate), this.sessionDictionary);
+            string[] dtoContentArray = dtoContent.Split(Environment.NewLine);
+            List<string> dtoContentList = new List<string>();
+            for (int i = 0; i < dtoContentArray.Length; i++)
+            {
+                if (i > 0 && string.IsNullOrWhiteSpace(dtoContentArray[i]) && string.IsNullOrWhiteSpace(dtoContentArray[i - 1]))
+                {
+                    continue;
+                }
+
+                dtoContentList.Add(dtoContentArray[i]);
+            }
+
+            return string.Join(Environment.NewLine, dtoContentList);
+        }
+
+        private void SaveDtoFile(string name, string content, bool suppressExistingFileMessage = false)
         {
             string directory = Path.Combine(this.cliConfigDirectory, CliConfig.DtoEntityDirectory);
             if (!Directory.Exists(directory))
@@ -84,15 +112,22 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
             }
             string filePath = Path.Combine(directory, name);
 
-            if (File.Exists(filePath))
+            if (!suppressExistingFileMessage)
             {
-                Console.WriteLine("The DTO you try to create already exists. The process has been terminated.");
-                return;
+                if (File.Exists(filePath))
+                {
+                    Console.WriteLine("The DTO you try to create already exists. The process has been terminated.");
+                    return;
+                }
+                else
+                {
+                    File.WriteAllText(filePath, content);
+                    Console.WriteLine("DTO has been created successfully!");
+                }
             }
-            else
+            else if (!File.Exists(filePath))
             {
                 File.WriteAllText(filePath, content);
-                Console.WriteLine("DTO has been created successfully!");
             }
         }
 
@@ -103,7 +138,8 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
                 { "EntityName", args[0] },
                 { "EntityNamespace", args[1] },
                 { "DtoNamespace", args[2] },
-                { "Properties",  args[3] }
+                { "Properties",  args[3] },
+                { "EnumNamespace",  args[1] + ".Enums" }
             };
         }
 
@@ -138,14 +174,12 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
                 foreach (var propertyDeclaration in propertyDeclarations)
                 {
                     var propertyItem = ParseEntityClassProperty((PropertyDeclarationSyntax)propertyDeclaration);
-
                     if (propertyItem != null)
                     {
                         propertiesResult.Add(propertyItem);
                     }
                 }
             }
-
             return propertiesResult;
         }
 
@@ -309,7 +343,7 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
                 {
                     return string.Empty;
                 }
-                return $"[DetailsOrder({Index})]";
+                return $"[DetailsOrder({Index}0)]";
             }
         }
 
@@ -333,7 +367,7 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
                 {
                     return string.Empty;
                 }
-                return $"[TableCell({Index}, \"{StringFunctions.SplitWordsByCapitalLetters(Name)}\", TableCellType.{GetTableCellTypeEnum()})]";
+                return $"[TableCell({Index}0, \"{StringFunctions.SplitWordsByCapitalLetters(Name)}\", TableCellType.{GetTableCellTypeEnum()})]";
             }
         }
 

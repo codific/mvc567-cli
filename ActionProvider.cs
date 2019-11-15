@@ -1,5 +1,5 @@
-﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Codific Ltd.
+﻿// This file is part of the codific567 CLI distribution (https://codific.com).
+// Copyright (C) 2019 Codific
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -35,7 +35,8 @@ namespace Codific.Mvc567.Cli
             {
                 { CommandsNames.ProjectInit, new ProjectInitFactory() },
                 { CommandsNames.VueComponent, new VueComponentFactory() },
-                { CommandsNames.EntityDto, new EntityDtoFactory() }
+                { CommandsNames.EntityDto, new EntityDtoFactory() },
+                { CommandsNames.Prototizer, new PrototizerFactory() }
             };
         }
 
@@ -56,7 +57,7 @@ namespace Codific.Mvc567.Cli
             catch (Exception)
             {
                 Console.WriteLine("Something unexpected happened. :(");
-                Console.WriteLine("Type mvc567 to check available commands.");
+                Console.WriteLine("Type codific567 to check available commands.");
             }
 
         }
@@ -68,18 +69,19 @@ namespace Codific.Mvc567.Cli
                                 .InformationalVersion
                                 .ToString();
 
-            PrintMvc567Text();
-            Console.WriteLine($"mvc567 .Net Command-line Tools {versionString}");
-            Console.WriteLine("Usage: mvc567 [command] [parameters]");
+            PrintCodific567Text();
+            Console.WriteLine($"codific567 .Net Command-line Tools {versionString}");
+            Console.WriteLine("Usage: codific567 [command] [parameters]");
             Console.WriteLine();
             Console.WriteLine("Commands:");
             Console.WriteLine("init -n projectName");
             Console.WriteLine("vue-component -n componentName");
             Console.WriteLine("entity-dto -e entityClassName");
+            Console.WriteLine("generate -j [optional] configurationJson");
             Console.WriteLine();
         }
 
-        private void PrintMvc567Text()
+        private void PrintCodific567Text()
         {
             Console.WriteLine();
             Console.WriteLine("               ╔═══╦═══╦═══╗ ╔═══╦╗  ╔══╗   ");
