@@ -94,8 +94,8 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                     "der\n.mfractor/\n\n# Local History for Visual Studio\n.localhistory/\n\n# BeatPulse he" +
                     "althcheck temp database\nhealthchecksdb\n\n# Backup folder for Package Reference Co" +
                     "nvert tool in Visual Studio 2017\nMigrationBackup/\n\n# App Settings\n*appsettings.*" +
-                    "\nwwwroot/dist/\nsrc/Application/wwwroot/dist\n\n# OSX specific\n.DS_Store\nsrc/Applic" +
-                    "ation/.DS_Store\n\n# Generator json\ngenerator.json\n");
+                    "\n!appsettings.Sample.json\nwwwroot/dist/\nsrc/Application/wwwroot/dist\n\n# OSX spec" +
+                    "ific\n.DS_Store\nsrc/Application/.DS_Store\n\n# Generator json\ngenerator.json\n");
             return this.GenerationEnvironment.ToString();
         }
         

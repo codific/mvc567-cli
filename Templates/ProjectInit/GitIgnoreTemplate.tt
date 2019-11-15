@@ -355,6 +355,7 @@ MigrationBackup/
 
 # App Settings
 *appsettings.*
+!appsettings.Sample.json
 wwwroot/dist/
 src/Application/wwwroot/dist
 

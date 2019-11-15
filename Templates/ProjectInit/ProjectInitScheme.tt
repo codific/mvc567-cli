@@ -399,6 +399,11 @@
                 },
                 {
                   "type": "file",
+                  "name": "appsettings.Sample.json",
+                  "templateName": "AppSettingsTemplate"
+                },
+                {
+                  "type": "file",
                   "name": "adminmenus.json",
                   "templateName": "AdminMenusTemplate"
                 },

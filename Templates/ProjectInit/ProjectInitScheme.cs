@@ -185,17 +185,19 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                     "     {\n                  \"type\": \"file\",\n                  \"name\": \"appsettings." +
                     "Development.json\",\n                  \"templateName\": \"AppSettingsTemplate\"\n     " +
                     "           },\n                {\n                  \"type\": \"file\",\n              " +
-                    "    \"name\": \"adminmenus.json\",\n                  \"templateName\": \"AdminMenusTemp" +
-                    "late\"\n                },\n                {\n                  \"type\": \"file\",\n   " +
-                    "               \"name\": \"package.json\",\n                  \"templateName\": \"Packag" +
-                    "eJsonTemplate\"\n                },\n                {\n                  \"type\": \"f" +
-                    "ile\",\n                  \"name\": \"gulpfile.js\",\n                  \"templateName\":" +
-                    " \"GulpFileTemplate\"\n                },\n                {\n                  \"type" +
-                    "\": \"file\",\n                  \"name\": \"Program.cs\",\n                  \"templateNa" +
-                    "me\": \"ProgramTemplate\"\n                },\n                {\n                  \"t" +
-                    "ype\": \"file\",\n                  \"name\": \"Startup.cs\",\n                  \"templat" +
-                    "eName\": \"StartupTemplate\"\n                }\n              ]\n            }\n      " +
-                    "    ]\n        }\n      ]\n    }\n  ]\n}\n");
+                    "    \"name\": \"appsettings.Sample.json\",\n                  \"templateName\": \"AppSet" +
+                    "tingsTemplate\"\n                },\n                {\n                  \"type\": \"f" +
+                    "ile\",\n                  \"name\": \"adminmenus.json\",\n                  \"templateNa" +
+                    "me\": \"AdminMenusTemplate\"\n                },\n                {\n                 " +
+                    " \"type\": \"file\",\n                  \"name\": \"package.json\",\n                  \"te" +
+                    "mplateName\": \"PackageJsonTemplate\"\n                },\n                {\n        " +
+                    "          \"type\": \"file\",\n                  \"name\": \"gulpfile.js\",\n             " +
+                    "     \"templateName\": \"GulpFileTemplate\"\n                },\n                {\n   " +
+                    "               \"type\": \"file\",\n                  \"name\": \"Program.cs\",\n         " +
+                    "         \"templateName\": \"ProgramTemplate\"\n                },\n                {\n" +
+                    "                  \"type\": \"file\",\n                  \"name\": \"Startup.cs\",\n      " +
+                    "            \"templateName\": \"StartupTemplate\"\n                }\n              ]\n" +
+                    "            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n");
             return this.GenerationEnvironment.ToString();
         }
         
