@@ -1,4 +1,9 @@
-﻿/// <binding BeforeBuild='vue:build' />
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+/// <binding BeforeBuild='vue:build' />
 let gulp = require("gulp"),
     uglify = require('gulp-uglify-es').default,
     inject = require('gulp-inject-string'),

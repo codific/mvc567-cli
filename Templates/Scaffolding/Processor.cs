@@ -1,5 +1,5 @@
-﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Codific Ltd.
+﻿// This file is part of the codific567 CLI distribution (https://codific.com).
+// Copyright (C) 2019 Codific
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -49,7 +49,8 @@ namespace Codific.Mvc567.Cli.Templates.Scaffolding
                         filePath = Path.Combine(rootFolder, item.Name);
                     }
 
-                    string fileContent = TemplateRenderer.RenderTemplate(Type.GetType($"{templatesNamespace}.{item.TemplateName}"), sessionDictionary);
+                    var type = Type.GetType($"{templatesNamespace}.{item.TemplateName}");
+                    string fileContent = TemplateRenderer.RenderTemplate(type, sessionDictionary);
 
                     CreateFile(filePath, fileContent, projectName);
                 }

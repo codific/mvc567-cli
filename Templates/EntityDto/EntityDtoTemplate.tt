@@ -1,12 +1,19 @@
-﻿<#@ template language="C#" #>
-<#@ import namespace="Mvc567.Cli.Commands.CommandFactories" #>
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Codific.Mvc567.Cli.Commands.CommandFactories" #>
 using AutoMapper;
-using Mvc567.Common.Attributes;
-using Mvc567.Common.Enums;
-using Mvc567.Entities.ViewModels.Abstractions;
+using Codific.Mvc567.Common.Attributes;
+using Codific.Mvc567.Common.Enums;
+using Codific.Mvc567.Entities.ViewModels.Abstractions;
+using Codific.Mvc567.Entities.Database;
+using Codific.Mvc567.Entities.DataTransferObjects.Entities;
 using <#=Session["EntityNamespace"]#>;
+using <#=Session["EnumNamespace"]#>;
 using System;
+
 
 namespace <#=Session["DtoNamespace"]#>
 {

@@ -15,39 +15,35 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     using System;
     
     
-    public partial class HomeControllerTemplate : HomeControllerTemplateBase {
+    public partial class ServiceProjectTemplate : ServiceProjectTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Configuration;\nusing C" +
-                    "odific.Mvc567.Controllers.Abstractions;\nusing Codific.Mvc567.Services.Infrastruc" +
-                    "ture;\nusing Codific.Mvc567.Common;\n\nnamespace ");
+            this.Write(@"<Project Sdk=""Microsoft.NET.Sdk.Web"">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include=""Codific.Mvc567"" Version=""*"" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include=""..\");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(@".Controllers.MVC
-{
-
-    [ApiExplorerSettings(IgnoreApi = true)]
-    public class HomeController : AbstractController
-    {
-        public HomeController(
-            IConfiguration configuration, 
-            IEmailService emailService, 
-            ILanguageService languageService)
-            : base(configuration, emailService, languageService)
-        {
-        }
-
-        [HttpGet]
-        [Route(""/"")]
-        [Route(""/"" + Constants.LanguageControllerPageRoute)]
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
-}
-
-");
+            this.Write(".Entities\\");
+            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
+            this.Write(".Entities.csproj\" />\n      <ProjectReference Include=\"..\\");
+            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
+            this.Write(".DataTransferObjects\\");
+            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
+            this.Write(".DataTransferObjects.csproj\" />\n      <ProjectReference Include=\"..\\");
+            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
+            this.Write(".Shared\\");
+            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
+            this.Write(".Shared.csproj\" />\n    </ItemGroup>\n\n</Project>\n");
             return this.GenerationEnvironment.ToString();
         }
         
@@ -55,7 +51,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         }
     }
     
-    public class HomeControllerTemplateBase {
+    public class ServiceProjectTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

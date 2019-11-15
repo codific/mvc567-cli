@@ -1,4 +1,9 @@
-﻿using Mvc567.DataAccess.Abstraction.Repositories;
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using Codific.Mvc567.DataAccess.Abstraction.Repositories;
 
 namespace <#=Session["ProjectName"]#>.DataAccess
 {

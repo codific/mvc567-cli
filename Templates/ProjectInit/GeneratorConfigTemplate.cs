@@ -15,39 +15,19 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     using System;
     
     
-    public partial class HomeControllerTemplate : HomeControllerTemplateBase {
+    public partial class GeneratorConfigTemplate : GeneratorConfigTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Configuration;\nusing C" +
-                    "odific.Mvc567.Controllers.Abstractions;\nusing Codific.Mvc567.Services.Infrastruc" +
-                    "ture;\nusing Codific.Mvc567.Common;\n\nnamespace ");
+            this.Write("{\n    \"generatorTemplate\": \"aspnetcore\",\n    \"modelPath\": \"");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(@".Controllers.MVC
-{
-
-    [ApiExplorerSettings(IgnoreApi = true)]
-    public class HomeController : AbstractController
-    {
-        public HomeController(
-            IConfiguration configuration, 
-            IEmailService emailService, 
-            ILanguageService languageService)
-            : base(configuration, emailService, languageService)
-        {
-        }
-
-        [HttpGet]
-        [Route(""/"")]
-        [Route(""/"" + Constants.LanguageControllerPageRoute)]
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
-}
-
-");
+            this.Write(@".uml"",
+    ""blockCommentTag"": ""//"",
+    ""javaPath"": ""/usr/bin/java"",
+    ""jarCommand"": ""-jar"",
+    ""jarPath"": ""/Applications/Prototizer.app/Contents/Eclipse/plugins/org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar"",
+    ""applicationJsonOption"": ""-application com.boza.phpgen.prototizer generator.json""
+}");
             return this.GenerationEnvironment.ToString();
         }
         
@@ -55,7 +35,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         }
     }
     
-    public class HomeControllerTemplateBase {
+    public class GeneratorConfigTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

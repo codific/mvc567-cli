@@ -15,38 +15,24 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     using System;
     
     
-    public partial class HomeControllerTemplate : HomeControllerTemplateBase {
+    public partial class EntityProjectTemplate : EntityProjectTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Configuration;\nusing C" +
-                    "odific.Mvc567.Controllers.Abstractions;\nusing Codific.Mvc567.Services.Infrastruc" +
-                    "ture;\nusing Codific.Mvc567.Common;\n\nnamespace ");
-            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(@".Controllers.MVC
-{
+            this.Write(@"<Project Sdk=""Microsoft.NET.Sdk.Web"">
 
-    [ApiExplorerSettings(IgnoreApi = true)]
-    public class HomeController : AbstractController
-    {
-        public HomeController(
-            IConfiguration configuration, 
-            IEmailService emailService, 
-            ILanguageService languageService)
-            : base(configuration, emailService, languageService)
-        {
-        }
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
 
-        [HttpGet]
-        [Route(""/"")]
-        [Route(""/"" + Constants.LanguageControllerPageRoute)]
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
-}
+  <ItemGroup>
+    <PackageReference Include=""Codific.Mvc567"" Version=""*"" />
+    <PackageReference Include=""Codific.Mvc567.DataAccess"" Version=""*"" />
+    <PackageReference Include=""Codific.Mvc567.Entities"" Version=""*"" />
+  </ItemGroup>
 
+</Project>
 ");
             return this.GenerationEnvironment.ToString();
         }
@@ -55,7 +41,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         }
     }
     
-    public class HomeControllerTemplateBase {
+    public class EntityProjectTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

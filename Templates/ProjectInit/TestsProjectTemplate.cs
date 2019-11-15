@@ -15,39 +15,12 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     using System;
     
     
-    public partial class HomeControllerTemplate : HomeControllerTemplateBase {
+    public partial class TestsProjectTemplate : TestsProjectTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Configuration;\nusing C" +
-                    "odific.Mvc567.Controllers.Abstractions;\nusing Codific.Mvc567.Services.Infrastruc" +
-                    "ture;\nusing Codific.Mvc567.Common;\n\nnamespace ");
-            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(@".Controllers.MVC
-{
-
-    [ApiExplorerSettings(IgnoreApi = true)]
-    public class HomeController : AbstractController
-    {
-        public HomeController(
-            IConfiguration configuration, 
-            IEmailService emailService, 
-            ILanguageService languageService)
-            : base(configuration, emailService, languageService)
-        {
-        }
-
-        [HttpGet]
-        [Route(""/"")]
-        [Route(""/"" + Constants.LanguageControllerPageRoute)]
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
-}
-
-");
+            this.Write("<Project Sdk=\"Microsoft.NET.Sdk.Web\">\n\n    <PropertyGroup>\n        <TargetFramewo" +
+                    "rk>netstandard2.0</TargetFramework>\n    </PropertyGroup>\n\n</Project>\n");
             return this.GenerationEnvironment.ToString();
         }
         
@@ -55,7 +28,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         }
     }
     
-    public class HomeControllerTemplateBase {
+    public class TestsProjectTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

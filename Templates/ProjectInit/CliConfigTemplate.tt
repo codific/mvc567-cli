@@ -1,7 +1,12 @@
-﻿{
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+{
 	"ProjectName": "<#=Session["ProjectName"]#>",
-	"EntityDirectory": "src<#=Session["DirectorySeparator"]#><#=Session["ProjectName"]#><#=Session["DirectorySeparator"]#>Entities<#=Session["DirectorySeparator"]#>",
-	"DtoEntityDirectory": "src<#=Session["DirectorySeparator"]#><#=Session["ProjectName"]#><#=Session["DirectorySeparator"]#>DataTransferObjects<#=Session["DirectorySeparator"]#>Entities<#=Session["DirectorySeparator"]#>",
+    "EntityDirectory": "src<#=Session["DirectorySeparator"]#><#=Session["ProjectName"]#>.Entities<#=Session["DirectorySeparator"]#>",
+    "DtoEntityDirectory": "src<#=Session["DirectorySeparator"]#><#=Session["ProjectName"]#>.DataTransferObjects<#=Session["DirectorySeparator"]#>",
 	"EntityNamespace": "<#=Session["ProjectName"]#>.Entities",
-	"DtoEntityNamespace": "<#=Session["ProjectName"]#>.DataTransferObjects.Entities"
+    "DtoEntityNamespace": "<#=Session["ProjectName"]#>.DataTransferObjects"
 }

@@ -1,4 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -8,13 +13,24 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Mvc567" Version="*" />
-    <PackageReference Include="Mvc567.Services" Version="*" />
-    <PackageReference Include="Mvc567.Common" Version="*" />
-    <PackageReference Include="Mvc567.DataAccess" Version="*" />
-    <PackageReference Include="Mvc567.Components" Version="*" />
+    <PackageReference Include="Codific.Mvc567" Version="*" />
+    <PackageReference Include="Codific.Mvc567.Services" Version="*" />
+    <PackageReference Include="Codific.Mvc567.Common" Version="*" />
+    <PackageReference Include="Codific.Mvc567.DataAccess" Version="*" />
+    <PackageReference Include="Codific.Mvc567.Components" Version="*" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
+  </ItemGroup>
+  
+  
+  <ItemGroup>
+    <ProjectReference Include="..\<#=Session["ProjectName"]#>.Entities\<#=Session["ProjectName"]#>.Entities.csproj" />
+    <ProjectReference Include="..\<#=Session["ProjectName"]#>.DataTransferObjects\<#=Session["ProjectName"]#>.DataTransferObjects.csproj" />
+    <ProjectReference Include="..\<#=Session["ProjectName"]#>.Services\<#=Session["ProjectName"]#>.Services.csproj" />
+    <ProjectReference Include="..\<#=Session["ProjectName"]#>.Shared\<#=Session["ProjectName"]#>.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,25 +1,58 @@
-﻿
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{<#=Session["ProjectGuid"]#>}") = "<#=Session["ProjectName"]#>", "src\\<#=Session["ProjectName"]#>\\<#=Session["ProjectName"]#>.csproj", "{<#=Session["MainProjectGuid"]#>}"
 EndProject
+Project("{<#=Session["ProjectGuid"]#>}") = "<#=Session["ProjectName"]#>.DataTransferObjects", "src\\<#=Session["ProjectName"]#>.DataTransferObjects\\<#=Session["ProjectName"]#>.DataTransferObjects.csproj", "{<#=Session["DtoProjectGuid"]#>}"
+EndProject
+Project("{<#=Session["ProjectGuid"]#>}") = "<#=Session["ProjectName"]#>.Entities", "src\\<#=Session["ProjectName"]#>.Entities\\<#=Session["ProjectName"]#>.Entities.csproj", "{<#=Session["EntitiesProjectGuid"]#>}"
+EndProject
+Project("{<#=Session["ProjectGuid"]#>}") = "<#=Session["ProjectName"]#>.Services", "src\\<#=Session["ProjectName"]#>.Services\\<#=Session["ProjectName"]#>.Services.csproj", "{<#=Session["ServicesProjectGuid"]#>}"
+EndProject
+Project("{<#=Session["ProjectGuid"]#>}") = "<#=Session["ProjectName"]#>.Shared", "src\\<#=Session["ProjectName"]#>.Shared\\<#=Session["ProjectName"]#>.Shared.csproj", "{<#=Session["SharedProjectGuid"]#>}"
+EndProject
+Project("{<#=Session["ProjectGuid"]#>}") = "<#=Session["ProjectName"]#>.Tests", "src\\<#=Session["ProjectName"]#>.Tests\\<#=Session["ProjectName"]#>.Tests.csproj", "{<#=Session["TestsProjectGuid"]#>}"
+EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{<#=Session["MainProjectGuid"]#>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{<#=Session["MainProjectGuid"]#>}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{<#=Session["MainProjectGuid"]#>}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{<#=Session["MainProjectGuid"]#>}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {<#=Session["SolutionGuid"]#>}
-	EndGlobalSection
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {<#=Session["MainProjectGuid"]#>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {<#=Session["MainProjectGuid"]#>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {<#=Session["MainProjectGuid"]#>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {<#=Session["MainProjectGuid"]#>}.Release|Any CPU.Build.0 = Release|Any CPU
+        {<#=Session["DtoProjectGuid"]#>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {<#=Session["DtoProjectGuid"]#>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {<#=Session["DtoProjectGuid"]#>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {<#=Session["DtoProjectGuid"]#>}.Release|Any CPU.Build.0 = Release|Any CPU
+        {<#=Session["EntitiesProjectGuid"]#>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {<#=Session["EntitiesProjectGuid"]#>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {<#=Session["EntitiesProjectGuid"]#>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {<#=Session["EntitiesProjectGuid"]#>}.Release|Any CPU.Build.0 = Release|Any CPU
+        {<#=Session["ServicesProjectGuid"]#>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {<#=Session["ServicesProjectGuid"]#>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {<#=Session["ServicesProjectGuid"]#>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {<#=Session["ServicesProjectGuid"]#>}.Release|Any CPU.Build.0 = Release|Any CPU
+        {<#=Session["SharedProjectGuid"]#>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {<#=Session["SharedProjectGuid"]#>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {<#=Session["SharedProjectGuid"]#>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {<#=Session["SharedProjectGuid"]#>}.Release|Any CPU.Build.0 = Release|Any CPU
+        {<#=Session["TestsProjectGuid"]#>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {<#=Session["TestsProjectGuid"]#>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {<#=Session["TestsProjectGuid"]#>}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+    GlobalSection(ExtensibilityGlobals) = postSolution
+        SolutionGuid = {<#=Session["SolutionGuid"]#>}
+    EndGlobalSection
 EndGlobal
