@@ -1,0 +1,7 @@
+{
+	"ProjectName": "ProjectName",
+	"EntityDirectory": "../ProjectName/src/ProjectName.Entities/",
+	"DtoEntityDirectory": "../ProjectName/src/ProjectName.Entities/DataTransferObjects",
+	"EntityNamespace": "ProjectName.Entities",
+	"DtoEntityNamespace": "ProjectName.DataTransferObjects.Entities"
+}
