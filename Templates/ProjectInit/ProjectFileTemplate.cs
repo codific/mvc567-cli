@@ -35,6 +35,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     <PackageReference Include=""Codific.Mvc567"" Version=""*"" />
     <PackageReference Include=""Codific.Mvc567.Services"" Version=""*"" />
     <PackageReference Include=""Codific.Mvc567.Common"" Version=""*"" />
+    <PackageReference Include=""Codific.Mvc567.CommonCore"" Version=""*"" />
     <PackageReference Include=""Codific.Mvc567.DataAccess"" Version=""*"" />
     <PackageReference Include=""Codific.Mvc567.Components"" Version=""*"" />
     <PackageReference Include=""Newtonsoft.Json"" Version=""12.0.2"" />
