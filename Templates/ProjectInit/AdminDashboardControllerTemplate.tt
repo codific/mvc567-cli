@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Mvc567.Common.Attributes;
-using Mvc567.Controllers.Abstractions;
-using Mvc567.DataAccess.Identity;
-using Mvc567.Services.Infrastructure;
+using Codific.Mvc567.Common.Attributes;
+using Codific.Mvc567.Controllers.Abstractions;
+using Codific.Mvc567.DataAccess.Identity;
+using Codific.Mvc567.Services.Infrastructure;
 using System.Threading.Tasks;
 
 namespace <#=Session["ProjectName"]#>.Controllers.MVC.Admin
@@ -12,7 +17,6 @@ namespace <#=Session["ProjectName"]#>.Controllers.MVC.Admin
     [Area("Admin")]
     [Route("admin")]
     [ApiExplorerSettings(IgnoreApi = true)]
-    [ValidateAdminCookie]
     [Authorize(Policy = ApplicationPermissions.AccessAdministrationPolicy)]
     public class AdminDashboardController : AbstractController
     {
@@ -25,7 +29,6 @@ namespace <#=Session["ProjectName"]#>.Controllers.MVC.Admin
         }
 
         [HttpGet]
-        [ValidateAdminCookie]
         public async virtual Task<IActionResult> Index()
         {
             return View();

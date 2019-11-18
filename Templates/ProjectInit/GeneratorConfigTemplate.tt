@@ -1,0 +1,14 @@
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+{
+    "generatorTemplate": "aspnetcore",
+    "modelPath": "<#=Session["ProjectName"]#>.uml",
+    "blockCommentTag": "//",
+    "javaPath": "/usr/bin/java",
+    "jarCommand": "-jar",
+    "jarPath": "/Applications/Prototizer.app/Contents/Eclipse/plugins/org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar",
+    "applicationJsonOption": "-application com.boza.phpgen.prototizer generator.json"
+}

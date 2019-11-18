@@ -1,5 +1,5 @@
-﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Codific Ltd.
+﻿// This file is part of the codific567 CLI distribution (https://codific.com).
+// Copyright (C) 2019 Codific
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
 {
     internal class ProjectInitFactory : CommandFactory
     {
-        private string templateNamespace = "Mvc567.Cli.Templates.ProjectInit";
+        private string templateNamespace = "Codific.Mvc567.Cli.Templates.ProjectInit";
 
         internal override void Execute(Dictionary<string, string> parameters)
         {
@@ -44,18 +44,23 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
         protected override void InitSessionDictionary(params object[] args)
         {
             string directorySeparator = Path.DirectorySeparatorChar.ToString();
+            string projectName = args[0].ToString().Substring(0, 1).ToUpper() + args[0].ToString().Substring(1);
             if (directorySeparator == @"\")
             {
                 directorySeparator = @"\\";
             }
-
             this.sessionDictionary = new Dictionary<string, object>
             {
-                { "ProjectName", args[0] },
+                { "ProjectName", projectName },
                 { "ProjectGuid", Guid.NewGuid().ToString().ToUpper() },
                 { "MainProjectGuid", Guid.NewGuid().ToString().ToUpper() },
                 { "SolutionGuid", Guid.NewGuid().ToString().ToUpper() },
-                { "DirectorySeparator", directorySeparator }
+                { "DirectorySeparator", directorySeparator },
+                { "DtoProjectGuid", Guid.NewGuid().ToString().ToUpper() },
+                { "EntitiesProjectGuid", Guid.NewGuid().ToString().ToUpper() },
+                { "ServicesProjectGuid", Guid.NewGuid().ToString().ToUpper() },
+                { "SharedProjectGuid", Guid.NewGuid().ToString().ToUpper() },
+                { "TestsProjectGuid", Guid.NewGuid().ToString().ToUpper() },
             };
         }
 

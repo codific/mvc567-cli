@@ -1,5 +1,13 @@
-﻿using <#=Session["ProjectName"]#>.DataAccess;
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+using <#=Session["ProjectName"]#>.DataAccess;
+using <#=Session["ProjectName"]#>.Entities;
+using System.Reflection;
 using AutoMapper;
+using Codific.Mvc567;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,14 +15,12 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Mvc567;
-using System.Reflection;
 
 namespace <#=Session["ProjectName"]#>
 {
     public class Startup : ApplicationStartup<EntityContext, StandardRepository>
     {
-        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment) : base(configuration, hostingEnvironment)
+        public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) : base(configuration, hostingEnvironment)
         {
             this.applicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
         }
@@ -47,11 +53,14 @@ namespace <#=Session["ProjectName"]#>
         protected override void RegisterMappingProfiles(ref IMapperConfigurationExpression configuration)
         {
             base.RegisterMappingProfiles(ref configuration);
+            configuration.AddMaps("<#=Session["ProjectName"]#>.Entities");
+            configuration.AddMaps("<#=Session["ProjectName"]#>.DataTransferObjects");
         }
 
         protected override void RegisterFeatureProviders(ref ApplicationPartManager applicationPartManager)
         {
             base.RegisterFeatureProviders(ref applicationPartManager);
+            applicationPartManager.FeatureProviders.DisableApplicationControllers(true);
         }
 
         protected override void RegisterRoutes(ref IRouteBuilder routes)

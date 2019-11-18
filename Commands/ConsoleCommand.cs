@@ -1,5 +1,5 @@
-﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Codific Ltd.
+﻿// This file is part of the codific567 CLI distribution (https://codific.com).
+// Copyright (C) 2019 Codific
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,6 +16,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Codific.Mvc567.Cli.Commands
 {
@@ -35,17 +36,26 @@ namespace Codific.Mvc567.Cli.Commands
 
         private void ParseCommand(string[] commandArgs)
         {
-            if (commandArgs != null && 
-                commandArgs.Length > 2 &&
-                commandArgs.Length % 2 == 1 &&
-                CommandsNames.CommandList.Contains(commandArgs[0]))
+            if (commandArgs != null && commandArgs.Length > 0 && CommandsNames.CommandList.Contains(commandArgs[0]))
             {
                 Command = commandArgs[0];
-                for (int i = 1; i < commandArgs.Length; i+= 2)
+                if (Command == CommandsNames.Prototizer && commandArgs.Length == 1)
                 {
-                    Parameters[commandArgs[i]] = commandArgs[i + 1];
+                    IsValid = true;
                 }
-                IsValid = true;
+                else if (Command == CommandsNames.EntityDto && commandArgs.Length == 2 && commandArgs[1] == CommandParameters.AllEntities)
+                {
+                    IsValid = true;
+                    Parameters.Add(commandArgs[1], commandArgs[1]);
+                }
+                else if (commandArgs.Length > 2 && commandArgs.Length % 2 == 1)
+                {
+                    for (int i = 1; i < commandArgs.Length; i += 2)
+                    {
+                        Parameters[commandArgs[i]] = commandArgs[i + 1];
+                    }
+                    IsValid = true;
+                }
             }
         }
     }

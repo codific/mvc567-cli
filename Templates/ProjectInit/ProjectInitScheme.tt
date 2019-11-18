@@ -1,5 +1,10 @@
-﻿{
-  "sheme": [
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+{
+  "scheme": [
     {
       "type": "folder",
       "name": "{{ProjectName}}",
@@ -11,6 +16,16 @@
         },
         {
           "type": "file",
+          "name": "generator.json",
+          "templateName": "GeneratorConfigTemplate"
+        },
+        {
+          "type": "file",
+          "name": ".gitignore",
+          "templateName": "GitIgnoreTemplate"
+        },
+        {
+          "type": "file",
           "name": "{{ProjectName}}.sln",
           "templateName": "ProjectSolutionTemplate"
         },
@@ -18,6 +33,61 @@
           "type": "folder",
           "name": "src",
           "content": [
+            {
+              "type": "folder",
+              "name": "{{ProjectName}}.Entities",
+              "content": [
+                {
+                  "type": "file",
+                  "name": "{{ProjectName}}.Entities.csproj",
+                  "templateName": "EntityProjectTemplate"
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "{{ProjectName}}.DataTransferObjects",
+              "content": [
+                {
+                  "type": "file",
+                  "name": "{{ProjectName}}.DataTransferObjects.csproj",
+                  "templateName": "DtoProjectTemplate"
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "{{ProjectName}}.Services",
+              "content": [
+                {
+                  "type": "file",
+                  "name": "{{ProjectName}}.Services.csproj",
+                  "templateName": "ServiceProjectTemplate"
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "{{ProjectName}}.Shared",
+              "content": [
+                {
+                  "type": "file",
+                  "name": "{{ProjectName}}.Shared.csproj",
+                  "templateName": "SharedProjectTemplate"
+                }
+              ]
+            },
+            {
+              "type": "folder",
+              "name": "{{ProjectName}}.Tests",
+              "content": [
+                {
+                  "type": "file",
+                  "name": "{{ProjectName}}.Tests.csproj",
+                  "templateName": "TestsProjectTemplate"
+                }
+              ]
+            },
             {
               "type": "folder",
               "name": "{{ProjectName}}",
@@ -325,6 +395,11 @@
                 {
                   "type": "file",
                   "name": "appsettings.Development.json",
+                  "templateName": "AppSettingsTemplate"
+                },
+                {
+                  "type": "file",
+                  "name": "appsettings.Sample.json",
                   "templateName": "AppSettingsTemplate"
                 },
                 {

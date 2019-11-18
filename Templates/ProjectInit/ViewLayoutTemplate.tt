@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width" />
-		<title>mvc567</title>
+		<title>codific567</title>
         <link rel="stylesheet" href="~/assets/css/style.min.css"/>
 		@RenderSection("Head", required: false)
 	</head>
