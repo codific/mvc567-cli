@@ -17,7 +17,6 @@ namespace <#=Session["ProjectName"]#>.Controllers.MVC.Admin
     [Area("Admin")]
     [Route("admin")]
     [ApiExplorerSettings(IgnoreApi = true)]
-    [ValidateAdminCookie]
     [Authorize(Policy = ApplicationPermissions.AccessAdministrationPolicy)]
     public class AdminDashboardController : AbstractController
     {
@@ -30,7 +29,6 @@ namespace <#=Session["ProjectName"]#>.Controllers.MVC.Admin
         }
 
         [HttpGet]
-        [ValidateAdminCookie]
         public async virtual Task<IActionResult> Index()
         {
             return View();

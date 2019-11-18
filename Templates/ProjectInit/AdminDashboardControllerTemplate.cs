@@ -35,7 +35,6 @@ namespace ");
     [Area(""Admin"")]
     [Route(""admin"")]
     [ApiExplorerSettings(IgnoreApi = true)]
-    [ValidateAdminCookie]
     [Authorize(Policy = ApplicationPermissions.AccessAdministrationPolicy)]
     public class AdminDashboardController : AbstractController
     {
@@ -48,7 +47,6 @@ namespace ");
         }
 
         [HttpGet]
-        [ValidateAdminCookie]
         public async virtual Task<IActionResult> Index()
         {
             return View();

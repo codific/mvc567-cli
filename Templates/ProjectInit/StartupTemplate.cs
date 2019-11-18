@@ -24,7 +24,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
             this.Write(".DataAccess;\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@".Entities;
+using System.Reflection;
 using AutoMapper;
+using Codific.Mvc567;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,8 +34,6 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Codific.Mvc567;
-using System.Reflection;
 
 namespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
@@ -41,7 +41,7 @@ namespace ");
 {
     public class Startup : ApplicationStartup<EntityContext, StandardRepository>
     {
-        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment) : base(configuration, hostingEnvironment)
+        public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) : base(configuration, hostingEnvironment)
         {
             this.applicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
         }

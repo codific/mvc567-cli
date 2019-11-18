@@ -19,9 +19,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("\nusing System;\nusing Microsoft.AspNetCore;\nusing Microsoft.AspNetCore.Hosting;\nus" +
-                    "ing Microsoft.Extensions.DependencyInjection;\nusing Codific.Mvc567.Seed;\n\nnamesp" +
-                    "ace ");
+            this.Write("\nusing System;\nusing Codific.Mvc567.Seed;\nusing Microsoft.AspNetCore.Hosting;\nusi" +
+                    "ng Microsoft.Extensions.DependencyInjection;\nusing Microsoft.Extensions.Hosting;" +
+                    "\n\nnamespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@"
 {
@@ -29,13 +29,13 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     {
         public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(args).Build();
+            var host = CreateHostBuilder(args).Build();
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var hostingEnvironment = services.GetRequiredService<IHostingEnvironment>();
+                    var hostingEnvironment = services.GetRequiredService<IWebHostEnvironment>();
                     var databaseInitializer = services.GetRequiredService<IDatabaseInitializer>();
                     databaseInitializer.SeedAsync().Wait();
                 }
@@ -45,11 +45,12 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
             }
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-
-
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
     }
 }");
             return this.GenerationEnvironment.ToString();
