@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-	  <Company>Codific</Company>
+    <Company>Codific</Company>
     <Product>codific567 CLI</Product>
     <!-- <PackageProjectUrl>https://github.com/intellisoft567/mvc567-cli</PackageProjectUrl>
     <RepositoryUrl>https://github.com/intellisoft567/mvc567-cli</RepositoryUrl>
@@ -12,6 +12,8 @@
     <Authors>Georgi Karagogov</Authors>
     <Copyright>Georgi Karagogov</Copyright>
     <PackageTags>codific567 CLI</PackageTags>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>Codific.ruleset</CodeAnalysisRuleSet>
 	
 	<PackAsTool>true</PackAsTool>
     <ToolCommandName>codific567</ToolCommandName>
@@ -26,6 +28,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
     <PackageReference Include="System.CodeDom" Version="4.5.0" />
     <PackageReference Include="Codific.Mvc567.Common" Version="1.1.3" />
   </ItemGroup>
@@ -112,9 +115,6 @@
     </Compile>
     <Compile Update="Templates\ProjectInit\ViewStartTemplate.cs">
       <DependentUpon>ViewStartTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\EntityDto\EntityDtoTemplate.cs">
-      <DependentUpon>EntityDtoTemplate.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\VueComponent\VueComponentTemplate.cs">
       <DependentUpon>VueComponentTemplate.tt</DependentUpon>
@@ -211,6 +211,9 @@
     </Compile>
     <Compile Update="Templates\ProjectInit\AdminMenusTemplate.cs">
       <DependentUpon>AdminMenusTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\EntityDto\EntityDtoTemplate.cs">
+      <DependentUpon>EntityDtoTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   

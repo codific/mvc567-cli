@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace Codific.Mvc567.Cli.Templates.ProjectInit {
+    using System.Linq;
+    using System.Text;
+    using System.Collections.Generic;
     using System;
     
     
@@ -16,12 +19,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            
-            #line 1 ""
             this.Write("{}");
-            
-            #line default
-            #line hidden
             return this.GenerationEnvironment.ToString();
         }
         

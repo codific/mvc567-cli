@@ -1,5 +1,5 @@
-﻿// This file is part of the mvc567 CLI distribution (https://github.com/intellisoft567/mvc567-cli).
-// Copyright (C) 2019 Codific Ltd.
+// This file is part of the codific567 CLI distribution (https://codific.com).
+// Copyright (C) 2019 Codific
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,14 +14,28 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-namespace Codific.Mvc567.Cli
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
+namespace Codific.Mvc567.Cli.Commands.Utils
 {
-    internal class Program
+    internal class SchemeItem
     {
-        private static void Main(string[] args)
+        internal SchemeItem()
         {
-            ActionProvider actionProvider = new ActionProvider(args);
-            actionProvider.Execute();
+            this.Content = new List<SchemeItem>();
         }
+
+        [JsonProperty("type")]
+        internal SchemeItemType Type { get; set; }
+
+        [JsonProperty("name")]
+        internal string Name { get; set; }
+
+        [JsonProperty("content")]
+        internal List<SchemeItem> Content { get; set; }
+
+        [JsonProperty("templateName")]
+        internal string TemplateName { get; set; }
     }
 }

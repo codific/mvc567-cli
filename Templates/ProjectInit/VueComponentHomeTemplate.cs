@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace Codific.Mvc567.Cli.Templates.ProjectInit {
+    using System.Linq;
+    using System.Text;
+    using System.Collections.Generic;
     using System;
     
     
@@ -16,14 +19,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            
-            #line 1 ""
             this.Write("Vue.component(\'home\', {\n    data: function () {\n        return {\n            plat" +
                     "formName: \'codific567\'\n        };\n    },\n    template: `\n        <div>\n         " +
                     "   <h1>Hello {{platformName}}</h1>\n        </div>\n`\n});\n");
-            
-            #line default
-            #line hidden
             return this.GenerationEnvironment.ToString();
         }
         

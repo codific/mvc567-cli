@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace Codific.Mvc567.Cli.Templates.ProjectInit {
+    using System.Linq;
+    using System.Text;
+    using System.Collections.Generic;
     using System;
     
     
@@ -16,8 +19,6 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            
-            #line 1 ""
             this.Write(@"let appInitPromises = [];
 
 const routes = [
@@ -61,9 +62,6 @@ Promise.all(appInitPromises).then(function () {
         router
     });
 });");
-            
-            #line default
-            #line hidden
             return this.GenerationEnvironment.ToString();
         }
         

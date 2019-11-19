@@ -4,6 +4,7 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="Codific.Mvc567.Cli.Commands.CommandFactories" #>
+<#@ import namespace="Codific.Mvc567.Cli.Commands.Utils" #>
 using AutoMapper;
 using Codific.Mvc567.Common.Attributes;
 using Codific.Mvc567.Common.Enums;

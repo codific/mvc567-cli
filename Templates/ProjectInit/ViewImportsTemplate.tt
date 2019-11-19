@@ -1,3 +1,8 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿<#@ template language="C#" linePragmas="false" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, Codific.Mvc567.Common
 @addTagHelper *, Codific.Mvc567.Components

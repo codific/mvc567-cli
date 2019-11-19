@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace Codific.Mvc567.Cli.Templates.ProjectInit {
+    using System.Linq;
+    using System.Text;
+    using System.Collections.Generic;
     using System;
     
     
@@ -16,14 +19,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            
-            #line 1 ""
             this.Write("html, body {\n    background: $primary;\n    color: $white;\n    height: 100%;\n    d" +
                     "isplay: flex;\n    width: 100%;\n}\n\n#app {\n    margin: auto;\n    text-align: cente" +
                     "r;\n}\n\n[v-cloak] > * {\n\tdisplay: none;\n}");
-            
-            #line default
-            #line hidden
             return this.GenerationEnvironment.ToString();
         }
         

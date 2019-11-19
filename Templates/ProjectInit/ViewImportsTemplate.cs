@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace Codific.Mvc567.Cli.Templates.ProjectInit {
+    using System.Linq;
+    using System.Text;
+    using System.Collections.Generic;
     using System;
     
     
@@ -16,13 +19,8 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            
-            #line 1 ""
             this.Write("@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers\n@addTagHelper *, Codific.Mvc" +
                     "567.Common\n@addTagHelper *, Codific.Mvc567.Components");
-            
-            #line default
-            #line hidden
             return this.GenerationEnvironment.ToString();
         }
         

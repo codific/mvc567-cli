@@ -1,25 +1,24 @@
 ﻿// This file is part of the codific567 CLI distribution (https://codific.com).
 // Copyright (C) 2019 Codific
-// 
+//
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-using Codific.Mvc567.Cli.Templates;
-using Codific.Mvc567.Cli.Templates.ProjectInit;
-using Codific.Mvc567.Cli.Templates.Scaffolding;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Codific.Mvc567.Cli.Templates.ProjectInit;
+using Codific.Mvc567.Cli.Templates.Scaffolding;
 
 namespace Codific.Mvc567.Cli.Commands.CommandFactories
 {
@@ -32,8 +31,8 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
             if (parameters.ContainsKey(CommandParameters.ProjectName) && !string.IsNullOrWhiteSpace(parameters[CommandParameters.ProjectName]))
             {
                 string modifiedProjectName = parameters[CommandParameters.ProjectName].Replace("-", "_").Replace(" ", "_");
-                InitSessionDictionary(modifiedProjectName);
-                ScaffoldProject(modifiedProjectName);
+                this.InitSessionDictionary(modifiedProjectName);
+                this.ScaffoldProject(modifiedProjectName);
             }
             else
             {
@@ -49,7 +48,8 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
             {
                 directorySeparator = @"\\";
             }
-            this.sessionDictionary = new Dictionary<string, object>
+
+            this.SessionDictionary = new Dictionary<string, object>
             {
                 { "ProjectName", projectName },
                 { "ProjectGuid", Guid.NewGuid().ToString().ToUpper() },
@@ -66,9 +66,9 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
 
         private void ScaffoldProject(string projectName)
         {
-            string projectSchemeJson = (new ProjectInitScheme()).TransformText();
+            string projectSchemeJson = new ProjectInitScheme().TransformText();
             Scheme projectScheme = Newtonsoft.Json.JsonConvert.DeserializeObject<Scheme>(projectSchemeJson);
-            Processor.CreateRootPathsRecursively(Directory.GetCurrentDirectory(), null, projectScheme.Items, projectName, this.templateNamespace, this.sessionDictionary);
+            Processor.CreateRootPathsRecursively(Directory.GetCurrentDirectory(), null, projectScheme.Items, projectName, this.templateNamespace, this.SessionDictionary);
             Console.WriteLine("Project structure has been successfully created.");
         }
     }
