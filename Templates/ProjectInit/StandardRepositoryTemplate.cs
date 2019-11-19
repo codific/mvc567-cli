@@ -19,7 +19,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using Codific.Mvc567.DataAccess.Abstraction.Repositories;\n\nnamespace ");
+            this.Write("using Codific.Mvc567.DataAccess.Core.Repositories;\n\nnamespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(".DataAccess\n{\n    public class StandardRepository : StandardRepository<EntityCont" +
                     "ext>\n    {\n        public StandardRepository(EntityContext context) : base(conte" +

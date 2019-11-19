@@ -19,31 +19,28 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write(@"<Project Sdk=""Microsoft.NET.Sdk.Web"">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include=""AutoMapper"" Version=""9.0.0"" />
-    <PackageReference Include=""Microsoft.AspNetCore.App"" />
-    <PackageReference Include=""Microsoft.AspNetCore.Mvc.Razor"" Version=""2.2.0"" />
-    <PackageReference Include=""Microsoft.AspNetCore.Razor"" Version=""2.2.0"" />
-    <PackageReference Include=""Microsoft.AspNetCore.Razor.Design"" Version=""2.2.0"" PrivateAssets=""All"" />
-    <PackageReference Include=""Codific.Mvc567"" Version=""*"" />
-    <PackageReference Include=""Codific.Mvc567.Services"" Version=""*"" />
-    <PackageReference Include=""Codific.Mvc567.Common"" Version=""*"" />
-    <PackageReference Include=""Codific.Mvc567.DataAccess"" Version=""*"" />
-    <PackageReference Include=""Codific.Mvc567.Components"" Version=""*"" />
-    <PackageReference Include=""Newtonsoft.Json"" Version=""12.0.2"" />
-    <PackageReference Include=""Npgsql.EntityFrameworkCore.PostgreSQL"" Version=""2.2.4"" />
-  </ItemGroup>
-  
-  
-  <ItemGroup>
-    <ProjectReference Include=""..\");
+            this.Write("<Project Sdk=\"Microsoft.NET.Sdk.Web\">\n\n  <PropertyGroup>\n    <TargetFramework>net" +
+                    "coreapp3.0</TargetFramework>\n    <AspNetCoreHostingModel>InProcess</AspNetCoreHo" +
+                    "stingModel>\n  </PropertyGroup>\n\n  <ItemGroup>\n    <PackageReference Include=\"Aut" +
+                    "oMapper\" Version=\"9.0.0\" />\n    <PackageReference Include=\"Microsoft.AspNetCore." +
+                    "App\" />\n    <PackageReference Include=\"Microsoft.AspNetCore.Mvc.Razor\" Version=\"" +
+                    "2.2.0\" />\n    <PackageReference Include=\"Microsoft.AspNetCore.Razor\" Version=\"2." +
+                    "2.0\" />\n    <PackageReference Include=\"Microsoft.AspNetCore.Razor.Design\" Versio" +
+                    "n=\"2.2.0\" PrivateAssets=\"All\" />\n    <PackageReference Include=\"Codific.Mvc567\" " +
+                    "Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.Common\" Version=\"*\"" +
+                    " />\n    <PackageReference Include=\"Codific.Mvc567.CommonCore\" Version=\"*\" />\n   " +
+                    " <PackageReference Include=\"Codific.Mvc567.Components\" Version=\"*\" />\n    <Packa" +
+                    "geReference Include=\"Codific.Mvc567.DataAccess\" Version=\"*\" />\n    <PackageRefer" +
+                    "ence Include=\"Codific.Mvc567.DataAccess.Abstractions\" Version=\"*\" />\n    <Packag" +
+                    "eReference Include=\"Codific.Mvc567.Dtos\" Version=\"*\" />\n    <PackageReference In" +
+                    "clude=\"Codific.Mvc567.Entities\" Version=\"*\" />\n    <PackageReference Include=\"Co" +
+                    "dific.Mvc567.Services\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc" +
+                    "567.Services.Abstractions\" Version=\"*\" />\n    <PackageReference Include=\"Codific" +
+                    ".Mvc567.UI\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.ViewMod" +
+                    "els\" Version=\"*\" />\n    <PackageReference Include=\"Newtonsoft.Json\" Version=\"12." +
+                    "0.3\" />\n    <PackageReference Include=\"Npgsql.EntityFrameworkCore.PostgreSQL\" Ve" +
+                    "rsion=\"3.0.1\" />\n  </ItemGroup>\n  \n  \n  <ItemGroup>\n    <ProjectReference Includ" +
+                    "e=\"..\\");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(".Entities\\");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));

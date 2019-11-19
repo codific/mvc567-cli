@@ -18,7 +18,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
             this.GenerationEnvironment = null;
             
             #line 1 ""
-            this.Write("<div>\n    <home></home>\n</div>\n\n@section Vue{\n    <vue-import name=\"Home\" />\n}");
+            this.Write("<div>\n    <p>Hello Codific567</p>\n</div>");
             
             #line default
             #line hidden

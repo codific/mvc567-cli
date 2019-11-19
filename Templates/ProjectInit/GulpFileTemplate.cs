@@ -19,35 +19,38 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("/// <binding BeforeBuild=\'vue:build\' />\nlet gulp = require(\"gulp\"),\n    uglify = " +
-                    "require(\'gulp-uglify-es\').default,\n    inject = require(\'gulp-inject-string\'),\n " +
-                    "   replace = require(\'gulp-replace\'),\n    rename = require(\'gulp-rename\'),\n    c" +
-                    "oncat = require(\'gulp-concat\'),\n    jsObfuscator = require(\'gulp-javascript-obfu" +
-                    "scator\'),\n    sass = require(\'gulp-sass\'),\n    cssmin = require(\'gulp-cssmin\');\n" +
-                    "\nconst componentsDirectory = \'Scripts/VueComponents/\';\nconst csHtmlResultDirecto" +
-                    "ry = \'Views/Components/Vue\';\n\ngulp.task(\'sass\', function () {\n    return gulp.sr" +
-                    "c(\'Styles/scss/**/*.scss\')\n        .pipe(sass())\n        .pipe(gulp.dest(\'Styles" +
-                    "/css\'));\n});\n\ngulp.task(\'min:css\', [\'sass\'], function () {\n    return gulp.src(\'" +
-                    "Styles/css/style.css\')\n        .pipe(cssmin({ keepSpecialComments: 0 }))\n       " +
-                    " .pipe(concat(\'style.min.css\'))\n        .pipe(gulp.dest(\'wwwroot/assets/css\'));\n" +
-                    "});\n\ngulp.task(\'vue:vendors\', function () {\n    return gulp.src([\n        \'node_" +
-                    "modules/vue/dist/vue.min.js\',\n        \'node_modules/vue-router/dist/vue-router.m" +
-                    "in.js\',\n        \'node_modules/axios/dist/axios.min.js\',\n        \'node_modules/vu" +
-                    "elidate/dist/vuelidate.min.js\',\n        \'node_modules/vuelidate/dist/validators." +
-                    "min.js\',\n        \'node_modules/vue-cookies/vue-cookies.js\',\n        \'node_module" +
-                    "s/vue-i18n/dist/vue-i18n.min.js\'\n    ])\n        .pipe(uglify())\n        .pipe(in" +
-                    "ject.prepend(\'<script type=\"text/javascript\">\'))\n        .pipe(inject.append(\'</" +
-                    "script>\'))\n        .pipe(replace(\'@\', \'@@\'))\n        .pipe(concat(\'_VueVendors.c" +
-                    "shtml\'))\n        .pipe(gulp.dest(csHtmlResultDirectory));\n});\n\ngulp.task(\'vue:co" +
-                    "mponents\', function () {\n    return gulp.src(componentPath(\'*\'))\n        .pipe(u" +
-                    "glify())\n        .pipe(jsObfuscator())\n        .pipe(inject.prepend(\'<script typ" +
-                    "e=\"text/javascript\">(function(){\"use strict\";\'))\n        .pipe(inject.append(\'})" +
-                    "();</script>\'))\n        .pipe(replace(\'@\', \'@@\'))\n        .pipe(rename({\n       " +
-                    "     prefix: \"_\",\n            suffix: \".Vue\",\n            extname: \".cshtml\"\n   " +
-                    "     }))\n        .pipe(gulp.dest(csHtmlResultDirectory));\n});\n\ngulp.task(\'styles" +
-                    "\', [\'min:css\']);\ngulp.task(\'vue:build\', [\'vue:vendors\', \'vue:components\']);\n\ncon" +
-                    "st componentPath = function (name = \'*\') {\n    return componentsDirectory + name" +
-                    " + \'.js\';\n};");
+            this.Write(@"/// <binding BeforeBuild='vue:build' />
+let gulp = require(""gulp""),
+    uglify = require('gulp-uglify-es').default,
+    inject = require('gulp-inject-string'),
+    replace = require('gulp-replace'),
+    rename = require('gulp-rename'),
+    concat = require('gulp-concat'),
+    jsObfuscator = require('gulp-javascript-obfuscator'),
+    sass = require('gulp-sass'),
+    cssmin = require('gulp-cssmin');
+
+const componentsDirectory = 'Scripts/VueComponents/';
+const csHtmlResultDirectory = 'Views/Components/Vue';
+
+gulp.task('sass', function () {
+    return gulp.src('Styles/scss/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('Styles/css'));
+});
+
+gulp.task('min:css', ['sass'], function () {
+    return gulp.src('Styles/css/style.css')
+        .pipe(cssmin({ keepSpecialComments: 0 }))
+        .pipe(concat('style.min.css'))
+        .pipe(gulp.dest('wwwroot/assets/css'));
+});
+
+gulp.task('styles', ['min:css']);
+
+const componentPath = function (name = '*') {
+    return componentsDirectory + name + '.js';
+};");
             return this.GenerationEnvironment.ToString();
         }
         

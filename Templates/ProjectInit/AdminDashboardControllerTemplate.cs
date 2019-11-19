@@ -25,7 +25,7 @@ using Microsoft.Extensions.Configuration;
 using Codific.Mvc567.Common.Attributes;
 using Codific.Mvc567.Controllers.Abstractions;
 using Codific.Mvc567.DataAccess.Identity;
-using Codific.Mvc567.Services.Infrastructure;
+using Codific.Mvc567.Services.Abstractions;
 using System.Threading.Tasks;
 
 namespace ");
