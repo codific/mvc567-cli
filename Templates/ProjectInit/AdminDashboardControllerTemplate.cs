@@ -19,14 +19,13 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write(@"using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Codific.Mvc567.Common.Attributes;
+            this.Write(@"using System.Threading.Tasks;
 using Codific.Mvc567.Controllers.Abstractions;
 using Codific.Mvc567.DataAccess.Identity;
 using Codific.Mvc567.Services.Abstractions;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
@@ -39,19 +38,18 @@ namespace ");
     public class AdminDashboardController : AbstractController
     {
         public AdminDashboardController(
-            IConfiguration configuration, 
-            IEmailService emailService, 
+            IConfiguration configuration,
+            IEmailService emailService,
             ILanguageService languageService)
             : base(configuration, emailService, languageService)
         {
         }
 
         [HttpGet]
-        public async virtual Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View();
+            return this.View();
         }
-
     }
 }");
             return this.GenerationEnvironment.ToString();

@@ -19,19 +19,18 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Configuration;\nusing C" +
-                    "odific.Mvc567.Controllers.Abstractions;\nusing Codific.Mvc567.Common;\nusing Codif" +
-                    "ic.Mvc567.Services.Abstractions;\n\nnamespace ");
+            this.Write("using Codific.Mvc567.Common;\nusing Codific.Mvc567.Controllers.Abstractions;\nusing" +
+                    " Codific.Mvc567.Services.Abstractions;\nusing Microsoft.AspNetCore.Mvc;\nusing Mic" +
+                    "rosoft.Extensions.Configuration;\n\nnamespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@".Controllers.MVC
 {
-
     [ApiExplorerSettings(IgnoreApi = true)]
     public class HomeController : AbstractController
     {
         public HomeController(
-            IConfiguration configuration, 
-            IEmailService emailService, 
+            IConfiguration configuration,
+            IEmailService emailService,
             ILanguageService languageService)
             : base(configuration, emailService, languageService)
         {
@@ -42,11 +41,10 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         [Route(""/"" + Constants.LanguageControllerPageRoute)]
         public IActionResult Index()
         {
-            return View();
+            return this.View();
         }
     }
 }
-
 ");
             return this.GenerationEnvironment.ToString();
         }

@@ -16,6 +16,16 @@
         },
         {
           "type": "file",
+          "name": "stylecop.json",
+          "templateName": "StyleCopJsonTemplate"
+        },
+        {
+          "type": "file",
+          "name": "Codific.ruleset",
+          "templateName": "CodificRulesetTemplate"
+        },
+        {
+          "type": "file",
           "name": "generator.json",
           "templateName": "GeneratorConfigTemplate"
         },

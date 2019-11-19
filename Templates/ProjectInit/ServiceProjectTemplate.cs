@@ -24,7 +24,13 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     <PropertyGroup>
         <TargetFramework>netcoreapp3.0</TargetFramework>
         <OutputType>Library</OutputType>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <CodeAnalysisRuleSet>../../Codific.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
+  
+    <ItemGroup>
+        <PackageReference Include=""StyleCop.Analyzers"" Version=""1.1.118"" />
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include=""Codific.Mvc567"" Version=""*"" />

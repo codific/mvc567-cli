@@ -21,16 +21,22 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
             this.GenerationEnvironment = null;
             this.Write(@"<Project Sdk=""Microsoft.NET.Sdk.Web"">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <OutputType>Library</OutputType>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <OutputType>Library</OutputType>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <CodeAnalysisRuleSet>../../Codific.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+  
+    <ItemGroup>
+        <PackageReference Include=""StyleCop.Analyzers"" Version=""1.1.118"" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include=""Codific.Mvc567"" Version=""*"" />
-    <PackageReference Include=""Codific.Mvc567.DataAccess"" Version=""*"" />
-    <PackageReference Include=""Codific.Mvc567.Entities"" Version=""*"" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include=""Codific.Mvc567"" Version=""*"" />
+        <PackageReference Include=""Codific.Mvc567.DataAccess"" Version=""*"" />
+        <PackageReference Include=""Codific.Mvc567.Entities"" Version=""*"" />
+    </ItemGroup>
 
 </Project>
 ");

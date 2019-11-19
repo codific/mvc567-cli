@@ -3,7 +3,6 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-
 using System;
 using Codific.Mvc567.Seed;
 using Microsoft.AspNetCore.Hosting;
@@ -26,7 +25,9 @@ namespace <#=Session["ProjectName"]#>
                     var databaseInitializer = services.GetRequiredService<IDatabaseInitializer>();
                     databaseInitializer.SeedAsync().Wait();
                 }
-                catch (Exception) { }
+                catch (Exception)
+                {
+                }
 
                 host.Run();
             }

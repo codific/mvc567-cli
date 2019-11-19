@@ -22,8 +22,8 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
             this.Write("using Codific.Mvc567.DataAccess.Core.Repositories;\n\nnamespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(".DataAccess\n{\n    public class StandardRepository : StandardRepository<EntityCont" +
-                    "ext>\n    {\n        public StandardRepository(EntityContext context) : base(conte" +
-                    "xt)\n        {\n\n        }\n    }\n}");
+                    "ext>\n    {\n        public StandardRepository(EntityContext context)\n            " +
+                    ": base(context)\n        {\n        }\n    }\n}");
             return this.GenerationEnvironment.ToString();
         }
         

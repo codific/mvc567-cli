@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -35,7 +36,7 @@ namespace Codific.Mvc567.Cli.Commands
 
         private void ParseCommand(string[] commandArgs)
         {
-            if (commandArgs != null && commandArgs.Length > 0 && CommandsNames.CommandList.Contains(commandArgs[0]))
+            if (commandArgs != null && commandArgs.Length > 0 && CommandsNames.getCommandsList().Contains(commandArgs[0]))
             {
                 this.Command = commandArgs[0];
                 if (this.Command == CommandsNames.Prototizer && commandArgs.Length == 1)

@@ -18,14 +18,6 @@ namespace Codific.Mvc567.Cli.Commands
 {
     internal static class CommandsNames
     {
-        internal static readonly string[] CommandList = new string[]
-        {
-            ProjectInit,
-            VueComponent,
-            EntityDto,
-            Prototizer,
-        };
-
         private static string projectInit = "init";
         private static string vueComponent = "vue-component";
         private static string entityDto = "entity-dto";
@@ -38,5 +30,16 @@ namespace Codific.Mvc567.Cli.Commands
         public static string EntityDto => CommandsNames.entityDto;
 
         public static string Prototizer => CommandsNames.prototizer;
+
+        internal static string[] getCommandsList()
+        {
+            return new string[]
+            {
+                ProjectInit,
+                VueComponent,
+                EntityDto,
+                Prototizer,
+            };
+        }
     }
 }

@@ -27,9 +27,11 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
 {
     public class EntityContext : AbstractEntityContext<EntityContext>
     {
-        public EntityContext(DbContextOptions<EntityContext> options) : base(options)
-        { }
-        
+        public EntityContext(DbContextOptions<EntityContext> options)
+            : base(options)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

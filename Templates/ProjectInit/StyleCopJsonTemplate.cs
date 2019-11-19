@@ -15,81 +15,20 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     using System;
     
     
-    public partial class StartupTemplate : StartupTemplateBase {
+    public partial class StyleCopJsonTemplate : StyleCopJsonTemplateBase {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write(@"using System.Reflection;
-using AutoMapper;
-using Codific.Mvc567;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.ApplicationParts;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using ");
-            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(".DataAccess;\nusing ");
-            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(".Entities;\n\nnamespace ");
-            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(@"
-{
-    public class Startup : ApplicationStartup<EntityContext, StandardRepository>
-    {
-        public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
-            : base(configuration, hostingEnvironment)
-        {
-            this.applicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
-        }
-
-        protected override void RegisterDbContext(ref IServiceCollection services)
-        {
-            base.RegisterDbContext(ref services);
-        }
-
-        protected override void RegisterServices(ref IServiceCollection services)
-        {
-            base.RegisterServices(ref services);
-        }
-
-        protected override void AddAuthorizationOptions(ref AuthorizationOptions options)
-        {
-            base.AddAuthorizationOptions(ref options);
-        }
-
-        protected override void ConfigureMiddlewareBeforeAuthentication(ref IApplicationBuilder app)
-        {
-            base.ConfigureMiddlewareBeforeAuthentication(ref app);
-        }
-
-        protected override void ConfigureMiddlewareAfterAuthentication(ref IApplicationBuilder app)
-        {
-            base.ConfigureMiddlewareAfterAuthentication(ref app);
-        }
-
-        protected override void RegisterMappingProfiles(ref IMapperConfigurationExpression configuration)
-        {
-            base.RegisterMappingProfiles(ref configuration);
-            configuration.AddMaps(""");
-            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(".Entities\");\n            configuration.AddMaps(\"");
-            this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(@".DataTransferObjects"");
-        }
-
-        protected override void RegisterFeatureProviders(ref ApplicationPartManager applicationPartManager)
-        {
-            base.RegisterFeatureProviders(ref applicationPartManager);
-        }
-
-        protected override void RegisterRoutes(ref IRouteBuilder routes)
-        {
-            base.RegisterRoutes(ref routes);
-        }
+            this.Write(@"{
+  ""$schema"": ""https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json"",
+  ""settings"": {
+    ""orderingRules"": {
+      ""usingDirectivesPlacement"": ""outsideNamespace""
+    },
+    ""documentationRules"": {
+      ""xmlHeader"": false
     }
+  }
 }
 ");
             return this.GenerationEnvironment.ToString();
@@ -99,7 +38,7 @@ using ");
         }
     }
     
-    public class StartupTemplateBase {
+    public class StyleCopJsonTemplateBase {
         
         private global::System.Text.StringBuilder builder;
         

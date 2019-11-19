@@ -9,9 +9,9 @@ namespace <#=Session["ProjectName"]#>.DataAccess
 {
     public class StandardRepository : StandardRepository<EntityContext>
     {
-        public StandardRepository(EntityContext context) : base(context)
+        public StandardRepository(EntityContext context)
+            : base(context)
         {
-
         }
     }
 }

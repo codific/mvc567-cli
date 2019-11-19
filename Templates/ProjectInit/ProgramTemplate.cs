@@ -19,9 +19,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("\nusing System;\nusing Codific.Mvc567.Seed;\nusing Microsoft.AspNetCore.Hosting;\nusi" +
-                    "ng Microsoft.Extensions.DependencyInjection;\nusing Microsoft.Extensions.Hosting;" +
-                    "\n\nnamespace ");
+            this.Write("using System;\nusing Codific.Mvc567.Seed;\nusing Microsoft.AspNetCore.Hosting;\nusin" +
+                    "g Microsoft.Extensions.DependencyInjection;\nusing Microsoft.Extensions.Hosting;\n" +
+                    "\nnamespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@"
 {
@@ -39,7 +39,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                     var databaseInitializer = services.GetRequiredService<IDatabaseInitializer>();
                     databaseInitializer.SeedAsync().Wait();
                 }
-                catch (Exception) { }
+                catch (Exception)
+                {
+                }
 
                 host.Run();
             }

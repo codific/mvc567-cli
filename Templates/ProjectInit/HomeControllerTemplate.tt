@@ -3,21 +3,20 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
+using Codific.Mvc567.Common;
+using Codific.Mvc567.Controllers.Abstractions;
+using Codific.Mvc567.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Codific.Mvc567.Controllers.Abstractions;
-using Codific.Mvc567.Common;
-using Codific.Mvc567.Services.Abstractions;
 
 namespace <#=Session["ProjectName"]#>.Controllers.MVC
 {
-
     [ApiExplorerSettings(IgnoreApi = true)]
     public class HomeController : AbstractController
     {
         public HomeController(
-            IConfiguration configuration, 
-            IEmailService emailService, 
+            IConfiguration configuration,
+            IEmailService emailService,
             ILanguageService languageService)
             : base(configuration, emailService, languageService)
         {
@@ -28,8 +27,7 @@ namespace <#=Session["ProjectName"]#>.Controllers.MVC
         [Route("/" + Constants.LanguageControllerPageRoute)]
         public IActionResult Index()
         {
-            return View();
+            return this.View();
         }
     }
 }
-

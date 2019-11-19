@@ -3,8 +3,6 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-using <#=Session["ProjectName"]#>.DataAccess;
-using <#=Session["ProjectName"]#>.Entities;
 using System.Reflection;
 using AutoMapper;
 using Codific.Mvc567;
@@ -15,12 +13,15 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using <#=Session["ProjectName"]#>.DataAccess;
+using <#=Session["ProjectName"]#>.Entities;
 
 namespace <#=Session["ProjectName"]#>
 {
     public class Startup : ApplicationStartup<EntityContext, StandardRepository>
     {
-        public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) : base(configuration, hostingEnvironment)
+        public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
+            : base(configuration, hostingEnvironment)
         {
             this.applicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
         }

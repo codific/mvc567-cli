@@ -19,9 +19,21 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("<Project Sdk=\"Microsoft.NET.Sdk.Web\">\n\n    <PropertyGroup>\n        <TargetFramewo" +
-                    "rk>netstandard2.0</TargetFramework>\n        <OutputType>Library</OutputType>\n   " +
-                    " </PropertyGroup>\n\n</Project>\n");
+            this.Write(@"<Project Sdk=""Microsoft.NET.Sdk.Web"">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <OutputType>Library</OutputType>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <CodeAnalysisRuleSet>../../Codific.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+  
+    <ItemGroup>
+        <PackageReference Include=""StyleCop.Analyzers"" Version=""1.1.118"" />
+    </ItemGroup>
+
+</Project>
+");
             return this.GenerationEnvironment.ToString();
         }
         
