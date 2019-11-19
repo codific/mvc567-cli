@@ -36,7 +36,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                 try
                 {
                     var hostingEnvironment = services.GetRequiredService<IWebHostEnvironment>();
-                    var databaseInitializer = services.GetRequiredService<IDatabaseInitializer>();
+                    var databaseInitializer = services.GetRequiredService<IApplicationDatabaseInitializer>();
                     databaseInitializer.SeedAsync().Wait();
                 }
                 catch (Exception)

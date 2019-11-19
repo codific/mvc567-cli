@@ -39,9 +39,10 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                     ">\n    <PackageReference Include=\"Codific.Mvc567.Services.Abstractions\" Version=\"" +
                     "*\" />\n    <PackageReference Include=\"Codific.Mvc567.UI\" Version=\"*\" />\n    <Pack" +
                     "ageReference Include=\"Codific.Mvc567.ViewModels\" Version=\"*\" />\n    <PackageRefe" +
-                    "rence Include=\"Newtonsoft.Json\" Version=\"12.0.3\" />\n    <PackageReference Includ" +
-                    "e=\"Npgsql.EntityFrameworkCore.PostgreSQL\" Version=\"3.0.1\" />\n  </ItemGroup>\n  \n " +
-                    " \n  <ItemGroup>\n    <ProjectReference Include=\"..\\");
+                    "rence Include=\"Microsoft.EntityFrameworkCore.Design\" Version=\"3.0.1\" />\n    <Pac" +
+                    "kageReference Include=\"Newtonsoft.Json\" Version=\"12.0.3\" />\n    <PackageReferenc" +
+                    "e Include=\"Npgsql.EntityFrameworkCore.PostgreSQL\" Version=\"3.0.1\" />\n  </ItemGro" +
+                    "up>\n  \n  \n  <ItemGroup>\n    <ProjectReference Include=\"..\\");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(".Entities\\");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
