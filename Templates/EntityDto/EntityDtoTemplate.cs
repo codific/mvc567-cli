@@ -13,6 +13,7 @@ namespace Codific.Mvc567.Cli.Templates.EntityDto {
     using System.Text;
     using System.Collections.Generic;
     using Codific.Mvc567.Cli.Commands.CommandFactories;
+    using Codific.Mvc567.Cli.Commands.Utils;
     using System;
     
     
