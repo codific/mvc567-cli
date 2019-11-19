@@ -15,7 +15,6 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Codific.Mvc567" Version="*" />
     <PackageReference Include="Codific.Mvc567.Common" Version="*" />
     <PackageReference Include="Codific.Mvc567.CommonCore" Version="*" />
