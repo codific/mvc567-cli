@@ -11,12 +11,6 @@
   "ConnectionStrings": {
     "DatabaseConnection": "Host=127.0.0.1;Port=5432;Database=codific567;Username=root567;Password=root567"
   },
-  "AdminLoginAuthenticator": {
-    "SecretKey": "",
-    "CookieFormat": "",
-    "SecretIndexes": "",
-    "ShowForTestPurposes": false
-  },
   "GoogleRecaptchaKeys": {
     "VisibleRecaptcha": {
       "SiteKey": "",
