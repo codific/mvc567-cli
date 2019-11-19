@@ -20,8 +20,8 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
             this.Write("using Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Configuration;\nusing C" +
-                    "odific.Mvc567.Controllers.Abstractions;\nusing Codific.Mvc567.Services.Infrastruc" +
-                    "ture;\nusing Codific.Mvc567.Common;\n\nnamespace ");
+                    "odific.Mvc567.Controllers.Abstractions;\nusing Codific.Mvc567.Common;\nusing Codif" +
+                    "ic.Mvc567.Services.Abstractions;\n\nnamespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@".Controllers.MVC
 {

@@ -55,19 +55,6 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
     ""Username"": """",
     ""EmailAddress"": """",
     ""Password"": """"
-  },
-  ""RobotsTxt"": [
-    ""User-agent: *"",
-    ""Disallow: /admin"",
-    ""Sitemap: https://localhost:44370/sitemap.xml""
-  ],
-  ""MetaTags"": {
-    ""OpenGraphSiteName"": """",
-    ""OpenGraphType"": """",
-    ""FacebookAppId"": """",
-    ""TwitterCard"": """",
-    ""TwitterCreator"": """",
-    ""TwitterSite"": """"
   }
 }
 ");

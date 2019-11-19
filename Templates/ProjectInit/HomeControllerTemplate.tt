@@ -6,8 +6,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Codific.Mvc567.Controllers.Abstractions;
-using Codific.Mvc567.Services.Infrastructure;
 using Codific.Mvc567.Common;
+using Codific.Mvc567.Services.Abstractions;
 
 namespace <#=Session["ProjectName"]#>.Controllers.MVC
 {

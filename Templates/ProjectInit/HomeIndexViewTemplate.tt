@@ -1,7 +1,3 @@
 ﻿<div>
-    <home></home>
+    <p>Hello Codific567</p>
 </div>
-
-@section Vue{
-    <vue-import name="Home" />
-}
