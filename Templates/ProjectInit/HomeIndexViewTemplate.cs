@@ -9,9 +9,6 @@
 //------------------------------------------------------------------------------
 
 namespace Codific.Mvc567.Cli.Templates.ProjectInit {
-    using System.Linq;
-    using System.Text;
-    using System.Collections.Generic;
     using System;
     
     
@@ -19,7 +16,12 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("<div>\n    <home></home>\n</div>\n\n@section Vue{\n    <vue-import name=\"Home\" />\n}");
+            
+            #line 1 ""
+            this.Write("<div>\n    <p>Hello Codific567</p>\n</div>");
+            
+            #line default
+            #line hidden
             return this.GenerationEnvironment.ToString();
         }
         

@@ -17,12 +17,19 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Codific.Mvc567" Version="*" />
-    <PackageReference Include="Codific.Mvc567.Services" Version="*" />
     <PackageReference Include="Codific.Mvc567.Common" Version="*" />
-    <PackageReference Include="Codific.Mvc567.DataAccess" Version="*" />
+    <PackageReference Include="Codific.Mvc567.CommonCore" Version="*" />
     <PackageReference Include="Codific.Mvc567.Components" Version="*" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
+    <PackageReference Include="Codific.Mvc567.DataAccess" Version="*" />
+    <PackageReference Include="Codific.Mvc567.DataAccess.Abstractions" Version="*" />
+    <PackageReference Include="Codific.Mvc567.Dtos" Version="*" />
+    <PackageReference Include="Codific.Mvc567.Entities" Version="*" />
+    <PackageReference Include="Codific.Mvc567.Services" Version="*" />
+    <PackageReference Include="Codific.Mvc567.Services.Abstractions" Version="*" />
+    <PackageReference Include="Codific.Mvc567.UI" Version="*" />
+    <PackageReference Include="Codific.Mvc567.ViewModels" Version="*" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.0.1" />
   </ItemGroup>
   
   

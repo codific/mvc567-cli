@@ -191,22 +191,6 @@
                   "type": "folder",
                   "name": "Scripts",
                   "content": [
-                    {
-                      "type": "folder",
-                      "name": "VueComponents",
-                      "content": [
-                        {
-                          "type": "file",
-                          "name": "App.js",
-                          "templateName": "VueComponentAppTemplate"
-                        },
-                        {
-                          "type": "file",
-                          "name": "Home.js",
-                          "templateName": "VueComponentHomeTemplate"
-                        }
-                      ]
-                    }
                   ]
                 },
                 {
@@ -284,10 +268,6 @@
                       "type": "folder",
                       "name": "Components",
                       "content": [
-                        {
-                          "type": "folder",
-                          "name": "Vue"
-                        }
                       ]
                     },
                     {

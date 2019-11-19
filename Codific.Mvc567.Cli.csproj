@@ -18,9 +18,9 @@
 	<PackAsTool>true</PackAsTool>
     <ToolCommandName>codific567</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <AssemblyVersion>1.0.14.0</AssemblyVersion>
-    <FileVersion>1.0.14.0</FileVersion>
-    <Version>1.0.14</Version>
+    <AssemblyVersion>1.0.15.0</AssemblyVersion>
+    <FileVersion>1.0.15.0</FileVersion>
+    <Version>1.0.15</Version>
     <PackageIconUrl>https://fix.codific.com/back/img/codific.png</PackageIconUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
@@ -106,12 +106,6 @@
     </Compile>
     <Compile Update="Templates\ProjectInit\AdminAreaViewImportsTemplate.cs">
       <DependentUpon>AdminAreaViewImportsTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\ProjectInit\VueComponentHomeTemplate.cs">
-      <DependentUpon>VueComponentHomeTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\ProjectInit\VueComponentAppTemplate.cs">
-      <DependentUpon>VueComponentAppTemplate.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\ProjectInit\ViewStartTemplate.cs">
       <DependentUpon>ViewStartTemplate.tt</DependentUpon>
@@ -327,14 +321,6 @@
     <None Update="Templates\ProjectInit\ViewStartTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ViewStartTemplate.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\ProjectInit\VueComponentAppTemplate.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>VueComponentAppTemplate.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\ProjectInit\VueComponentHomeTemplate.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>VueComponentHomeTemplate.cs</LastGenOutput>
     </None>
     <None Update="Templates\VueComponent\VueComponentTemplate.tt">
       <LastGenOutput>VueComponentTemplate.cs</LastGenOutput>

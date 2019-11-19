@@ -84,7 +84,6 @@ namespace ");
         protected override void RegisterFeatureProviders(ref ApplicationPartManager applicationPartManager)
         {
             base.RegisterFeatureProviders(ref applicationPartManager);
-            applicationPartManager.FeatureProviders.DisableApplicationControllers(true);
         }
 
         protected override void RegisterRoutes(ref IRouteBuilder routes)

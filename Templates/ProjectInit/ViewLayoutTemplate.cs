@@ -28,12 +28,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
 		@RenderSection(""Head"", required: false)
 	</head>
     <body>
-        <div id=""app"" v-cloak>
+        <div id=""app"">
             @RenderBody()
         </div>
-        <vue-init />
-        @RenderSection(""Vue"", required: false)
-        <vue-import name=""App"" />
     </body>
 </html>");
             return this.GenerationEnvironment.ToString();

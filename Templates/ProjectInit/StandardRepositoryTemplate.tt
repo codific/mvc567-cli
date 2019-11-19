@@ -3,7 +3,7 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-using Codific.Mvc567.DataAccess.Abstraction.Repositories;
+using Codific.Mvc567.DataAccess.Core.Repositories;
 
 namespace <#=Session["ProjectName"]#>.DataAccess
 {

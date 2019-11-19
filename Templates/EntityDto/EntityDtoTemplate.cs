@@ -21,14 +21,13 @@ namespace Codific.Mvc567.Cli.Templates.EntityDto {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using AutoMapper;\nusing Codific.Mvc567.Common.Attributes;\nusing Codific.Mvc567.Co" +
-                    "mmon.Enums;\nusing Codific.Mvc567.Entities.ViewModels.Abstractions;\nusing Codific" +
-                    ".Mvc567.Entities.Database;\nusing Codific.Mvc567.Entities.DataTransferObjects.Ent" +
-                    "ities;\nusing ");
+            this.Write("using System;\nusing AutoMapper;\nusing Codific.Mvc567.Common.Attributes;\nusing Cod" +
+                    "ific.Mvc567.Common.Enums;\nusing Codific.Mvc567.Entities.Database;\nusing Codific." +
+                    "Mvc567.Dtos.ViewModels.Abstractions;\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["EntityNamespace"]));
             this.Write(";\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["EnumNamespace"]));
-            this.Write(";\nusing System;\n\n\nnamespace ");
+            this.Write(";\n\nnamespace ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["DtoNamespace"]));
             this.Write("\n{\n    [AutoMap(typeof(");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["EntityName"]));
