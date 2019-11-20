@@ -42,7 +42,7 @@ using ");
         public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
             : base(configuration, hostingEnvironment)
         {
-            this.applicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
+            this.ApplicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
         }
 
         protected override void RegisterDbContext(ref IServiceCollection services)
