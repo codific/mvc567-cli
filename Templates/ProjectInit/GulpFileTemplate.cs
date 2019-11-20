@@ -30,9 +30,6 @@ let gulp = require(""gulp""),
     sass = require('gulp-sass'),
     cssmin = require('gulp-cssmin');
 
-const componentsDirectory = 'Scripts/VueComponents/';
-const csHtmlResultDirectory = 'Views/Components/Vue';
-
 gulp.task('sass', function () {
     return gulp.src('Styles/scss/**/*.scss')
         .pipe(sass())
@@ -47,10 +44,7 @@ gulp.task('min:css', ['sass'], function () {
 });
 
 gulp.task('styles', ['min:css']);
-
-const componentPath = function (name = '*') {
-    return componentsDirectory + name + '.js';
-};");
+");
             return this.GenerationEnvironment.ToString();
         }
         
