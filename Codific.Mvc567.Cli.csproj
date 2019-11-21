@@ -87,9 +87,6 @@
     <Compile Update="Templates\ProjectInit\AdminAreaViewStartTemplate.cs">
       <DependentUpon>AdminAreaViewStartTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Update="Templates\ProjectInit\AdminMenusTemplate.cs">
-      <DependentUpon>AdminMenusTemplate.tt</DependentUpon>
-    </Compile>
     <Compile Update="Templates\ProjectInit\EntityProjectTemplate.cs">
       <DependentUpon>EntityProjectTemplate.tt</DependentUpon>
     </Compile>
@@ -231,10 +228,6 @@
     <None Update="Templates\ProjectInit\AdminDashboardIndexViewTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AdminDashboardIndexViewTemplate.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\ProjectInit\AdminMenusTemplate.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>AdminMenusTemplate.cs</LastGenOutput>
     </None>
     <None Update="Templates\ProjectInit\AppSettingsTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>

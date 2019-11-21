@@ -181,17 +181,15 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                     "                },\n                {\n                  \"type\": \"file\",\n         " +
                     "         \"name\": \"appsettings.Sample.json\",\n                  \"templateName\": \"A" +
                     "ppSettingsTemplate\"\n                },\n                {\n                  \"type" +
-                    "\": \"file\",\n                  \"name\": \"adminmenus.json\",\n                  \"templ" +
-                    "ateName\": \"AdminMenusTemplate\"\n                },\n                {\n            " +
-                    "      \"type\": \"file\",\n                  \"name\": \"package.json\",\n                " +
-                    "  \"templateName\": \"PackageJsonTemplate\"\n                },\n                {\n   " +
-                    "               \"type\": \"file\",\n                  \"name\": \"gulpfile.js\",\n        " +
-                    "          \"templateName\": \"GulpFileTemplate\"\n                },\n                " +
-                    "{\n                  \"type\": \"file\",\n                  \"name\": \"Program.cs\",\n    " +
-                    "              \"templateName\": \"ProgramTemplate\"\n                },\n             " +
-                    "   {\n                  \"type\": \"file\",\n                  \"name\": \"Startup.cs\",\n " +
-                    "                 \"templateName\": \"StartupTemplate\"\n                }\n           " +
-                    "   ]\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n");
+                    "\": \"file\",\n                  \"name\": \"package.json\",\n                  \"template" +
+                    "Name\": \"PackageJsonTemplate\"\n                },\n                {\n              " +
+                    "    \"type\": \"file\",\n                  \"name\": \"gulpfile.js\",\n                  \"" +
+                    "templateName\": \"GulpFileTemplate\"\n                },\n                {\n         " +
+                    "         \"type\": \"file\",\n                  \"name\": \"Program.cs\",\n               " +
+                    "   \"templateName\": \"ProgramTemplate\"\n                },\n                {\n      " +
+                    "            \"type\": \"file\",\n                  \"name\": \"Startup.cs\",\n            " +
+                    "      \"templateName\": \"StartupTemplate\"\n                }\n              ]\n      " +
+                    "      }\n          ]\n        }\n      ]\n    }\n  ]\n}\n");
             return this.GenerationEnvironment.ToString();
         }
         

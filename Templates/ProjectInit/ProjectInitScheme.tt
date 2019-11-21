@@ -394,11 +394,6 @@
                 },
                 {
                   "type": "file",
-                  "name": "adminmenus.json",
-                  "templateName": "AdminMenusTemplate"
-                },
-                {
-                  "type": "file",
                   "name": "package.json",
                   "templateName": "PackageJsonTemplate"
                 },
