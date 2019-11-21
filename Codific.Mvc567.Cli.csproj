@@ -5,9 +5,9 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Company>Codific</Company>
     <Product>codific567 CLI</Product>
-    <!-- <PackageProjectUrl>https://github.com/intellisoft567/mvc567-cli</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/intellisoft567/mvc567-cli</RepositoryUrl>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance> -->
+    <PackageProjectUrl>https://github.com/codific/mvc567-cli</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/codific/mvc567-cli</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>codific567 CLI is the official codific567 project scaffolding engine.</Description>
     <Authors>Codific</Authors>
     <Copyright>Codific</Copyright>
@@ -18,9 +18,9 @@
 	<PackAsTool>true</PackAsTool>
     <ToolCommandName>codific567</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <AssemblyVersion>1.0.18.0</AssemblyVersion>
-    <FileVersion>1.0.18.0</FileVersion>
-    <Version>1.0.18</Version>
+    <AssemblyVersion>1.0.19.0</AssemblyVersion>
+    <FileVersion>1.0.19.0</FileVersion>
+    <Version>1.0.19</Version>
     <PackageIconUrl>https://fix.codific.com/back/img/codific.png</PackageIconUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>

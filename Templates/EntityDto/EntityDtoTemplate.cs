@@ -46,15 +46,14 @@ namespace Codific.Mvc567.Cli.Templates.EntityDto {
             this.Write(this.ToStringHelper.ToStringWithCulture( ((EntityDtoClassProperty)property).TableViewAttribute ));
             this.Write("\n        ");
             this.Write(this.ToStringHelper.ToStringWithCulture( ((EntityDtoClassProperty)property).CreateEditAttribute ));
-            this.Write(" ");
  } 
-            this.Write(" \n        public ");
+            this.Write("        public ");
             this.Write(this.ToStringHelper.ToStringWithCulture( ((EntityDtoClassProperty)property).Type ));
             this.Write(" ");
             this.Write(this.ToStringHelper.ToStringWithCulture( ((EntityDtoClassProperty)property).Name ));
-            this.Write(" { get; set; } \n");
+            this.Write(" { get; set; }\n");
  } 
-            this.Write("        \n    }\n}\n");
+            this.Write("    }\n}\n");
             return this.GenerationEnvironment.ToString();
         }
         
