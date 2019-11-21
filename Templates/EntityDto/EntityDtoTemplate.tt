@@ -28,6 +28,7 @@ namespace <#=Session["DtoNamespace"]#>
 <# if (((EntityDtoClassProperty)property).ShowAttributes) { #>        <#= ((EntityDtoClassProperty)property).DetailsAttribute #>
         <#= ((EntityDtoClassProperty)property).TableViewAttribute #>
         <#= ((EntityDtoClassProperty)property).CreateEditAttribute #><# } #>
+
         public <#= ((EntityDtoClassProperty)property).Type #> <#= ((EntityDtoClassProperty)property).Name #> { get; set; }
 <# } #>
     }

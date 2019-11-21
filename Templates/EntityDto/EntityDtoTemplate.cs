@@ -47,7 +47,7 @@ namespace Codific.Mvc567.Cli.Templates.EntityDto {
             this.Write("\n        ");
             this.Write(this.ToStringHelper.ToStringWithCulture( ((EntityDtoClassProperty)property).CreateEditAttribute ));
  } 
-            this.Write("        public ");
+            this.Write("\n        public ");
             this.Write(this.ToStringHelper.ToStringWithCulture( ((EntityDtoClassProperty)property).Type ));
             this.Write(" ");
             this.Write(this.ToStringHelper.ToStringWithCulture( ((EntityDtoClassProperty)property).Name ));
