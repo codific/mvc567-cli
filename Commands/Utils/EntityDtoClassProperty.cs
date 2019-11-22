@@ -113,13 +113,13 @@ namespace Codific.Mvc567.Cli.Commands.Utils
         {
             string defaultType = TableCellType.Text.ToString();
             string targetType = defaultType;
-            string[] numericTypes = new string[]
+            string[] numericTypes =
             {
-                "byte", "sbyte", "short", "ushort", "int", "uint", "long", "ulong", "float", "double", "decimal",
-                "byte?", "sbyte?", "short?", "ushort?", "int?", "uint?", "long?", "ulong?", "float?", "double?", "decimal?",
-                "Int16", "Int32", "Int64", "Single", "Double", "Decimal",
+                "float", "double", "decimal",
+                "float?", "double?", "decimal?",
+                "Single", "Double", "Decimal",
             };
-            string[] booleanTypes = new string[] { "bool", "bool?", "Boolean" };
+            string[] booleanTypes = { "bool", "bool?", "Boolean" };
 
             if (numericTypes.Contains(this.Type.ToLower()))
             {
