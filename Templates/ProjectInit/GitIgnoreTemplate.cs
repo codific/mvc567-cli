@@ -92,10 +92,11 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                     "un/\n\n# MSBuild Binary and Structured Log\n*.binlog\n\n# NVidia Nsight GPU debugger " +
                     "configuration file\n*.nvuser\n\n# MFractors (Xamarin productivity tool) working fol" +
                     "der\n.mfractor/\n\n# Local History for Visual Studio\n.localhistory/\n\n# BeatPulse he" +
-                    "althcheck temp database\nhealthchecksdb\n\n# Backup folder for Package Reference Co" +
-                    "nvert tool in Visual Studio 2017\nMigrationBackup/\n\n# App Settings\n*appsettings.*" +
-                    "\n!appsettings.Sample.json\nwwwroot/dist/\nsrc/Application/wwwroot/dist\n\n# OSX spec" +
-                    "ific\n.DS_Store\nsrc/Application/.DS_Store\n\n# Generator json\ngenerator.json\n");
+                    "althcheck temp database\nhealthchecksdb\n\n# Rider or JetBrains IDEs\n.idea/\n\n# Back" +
+                    "up folder for Package Reference Convert tool in Visual Studio 2017\nMigrationBack" +
+                    "up/\n\n# App Settings\n*appsettings.*\n!appsettings.Sample.json\nwwwroot/dist/\nsrc/Ap" +
+                    "plication/wwwroot/dist\n\n# OSX specific\n.DS_Store\nsrc/Application/.DS_Store\n\n# Ge" +
+                    "nerator json\ngenerator.json\n");
             return this.GenerationEnvironment.ToString();
         }
         
