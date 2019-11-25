@@ -19,17 +19,10 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write(@"using System.Reflection;
-using AutoMapper;
-using Codific.Mvc567;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.ApplicationParts;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using ");
+            this.Write("using System.Reflection;\nusing Codific.Mvc567;\nusing Codific.Mvc567.Extensions;\nu" +
+                    "sing Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\nusing Mic" +
+                    "rosoft.Extensions.Configuration;\nusing Microsoft.Extensions.DependencyInjection;" +
+                    "\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(".DataAccess;\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
@@ -37,61 +30,49 @@ using ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@"
 {
-    public class Startup : ApplicationStartup<EntityContext, StandardRepository>
+    public class Startup
     {
         public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
-            : base(configuration, hostingEnvironment)
         {
+            this.Configuration = configuration;
+            this.HostingEnvironment = hostingEnvironment;
             this.ApplicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
         }
 
-        protected override void RegisterDbContext(ref IServiceCollection services)
-        {
-            base.RegisterDbContext(ref services);
-        }
+        public string ApplicationAssembly { get; protected set; }
 
-        protected override void RegisterServices(ref IServiceCollection services)
-        {
-            base.RegisterServices(ref services);
-        }
+        public IConfiguration Configuration { get; }
 
-        protected override void AddAuthorizationOptions(ref AuthorizationOptions options)
-        {
-            base.AddAuthorizationOptions(ref options);
-        }
+        public IWebHostEnvironment HostingEnvironment { get; }
 
-        protected override void ConfigureMiddlewareBeforeAuthentication(ref IApplicationBuilder app)
+        public void ConfigureServices(IServiceCollection services)
         {
-            base.ConfigureMiddlewareBeforeAuthentication(ref app);
-        }
-
-        protected override void ConfigureMiddlewareAfterAuthentication(ref IApplicationBuilder app)
-        {
-            base.ConfigureMiddlewareAfterAuthentication(ref app);
-        }
-
-        protected override void RegisterMappingProfiles(ref IMapperConfigurationExpression configuration)
-        {
-            base.RegisterMappingProfiles(ref configuration);
-            configuration.AddMaps(""");
+            services.AddMvc567Database<EntityContext, StandardRepository>(this.Configuration, this.ApplicationAssembly);
+            services.AddMvc567Services<EntityContext>();
+            services.AddMvc567Identity(this.Configuration);
+            services.AddMvc567Mapping(this.ApplicationAssembly, config =>
+            {
+                config.AddMaps(""");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
-            this.Write(".Entities\");\n            configuration.AddMaps(\"");
+            this.Write(".Entities\");\n                config.AddMaps(\"");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@".DataTransferObjects"");
+            });
+            services.AddMvc567Configuration(this.Configuration);
+            services.AddMvc567Views();
+            services.AddMvc567FeatureProviders();
         }
 
-        protected override void RegisterFeatureProviders(ref ApplicationPartManager applicationPartManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment hostEnvironment)
         {
-            base.RegisterFeatureProviders(ref applicationPartManager);
-        }
-
-        protected override void RegisterRoutes(ref IRouteBuilder routes)
-        {
-            base.RegisterRoutes(ref routes);
+            app.UseMvc567Middlewares(hostEnvironment);
+            app.UseMvc(routes =>
+            {
+                routes.RegisterMvc567Routes();
+            });
         }
     }
-}
-");
+}");
             return this.GenerationEnvironment.ToString();
         }
         

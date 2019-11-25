@@ -4,13 +4,10 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 using System.Reflection;
-using AutoMapper;
 using Codific.Mvc567;
-using Microsoft.AspNetCore.Authorization;
+using Codific.Mvc567.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.ApplicationParts;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using <#=Session["ProjectName"]#>.DataAccess;
@@ -18,54 +15,43 @@ using <#=Session["ProjectName"]#>.Entities;
 
 namespace <#=Session["ProjectName"]#>
 {
-    public class Startup : ApplicationStartup<EntityContext, StandardRepository>
+    public class Startup
     {
         public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
-            : base(configuration, hostingEnvironment)
         {
+            this.Configuration = configuration;
+            this.HostingEnvironment = hostingEnvironment;
             this.ApplicationAssembly = Assembly.GetExecutingAssembly().GetName().Name;
         }
 
-        protected override void RegisterDbContext(ref IServiceCollection services)
+        public string ApplicationAssembly { get; protected set; }
+
+        public IConfiguration Configuration { get; }
+
+        public IWebHostEnvironment HostingEnvironment { get; }
+
+        public void ConfigureServices(IServiceCollection services)
         {
-            base.RegisterDbContext(ref services);
+            services.AddMvc567Database<EntityContext, StandardRepository>(this.Configuration, this.ApplicationAssembly);
+            services.AddMvc567Services<EntityContext>();
+            services.AddMvc567Identity(this.Configuration);
+            services.AddMvc567Mapping(this.ApplicationAssembly, config =>
+            {
+                config.AddMaps("<#=Session["ProjectName"]#>.Entities");
+                config.AddMaps("<#=Session["ProjectName"]#>.DataTransferObjects");
+            });
+            services.AddMvc567Configuration(this.Configuration);
+            services.AddMvc567Views();
+            services.AddMvc567FeatureProviders();
         }
 
-        protected override void RegisterServices(ref IServiceCollection services)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment hostEnvironment)
         {
-            base.RegisterServices(ref services);
-        }
-
-        protected override void AddAuthorizationOptions(ref AuthorizationOptions options)
-        {
-            base.AddAuthorizationOptions(ref options);
-        }
-
-        protected override void ConfigureMiddlewareBeforeAuthentication(ref IApplicationBuilder app)
-        {
-            base.ConfigureMiddlewareBeforeAuthentication(ref app);
-        }
-
-        protected override void ConfigureMiddlewareAfterAuthentication(ref IApplicationBuilder app)
-        {
-            base.ConfigureMiddlewareAfterAuthentication(ref app);
-        }
-
-        protected override void RegisterMappingProfiles(ref IMapperConfigurationExpression configuration)
-        {
-            base.RegisterMappingProfiles(ref configuration);
-            configuration.AddMaps("<#=Session["ProjectName"]#>.Entities");
-            configuration.AddMaps("<#=Session["ProjectName"]#>.DataTransferObjects");
-        }
-
-        protected override void RegisterFeatureProviders(ref ApplicationPartManager applicationPartManager)
-        {
-            base.RegisterFeatureProviders(ref applicationPartManager);
-        }
-
-        protected override void RegisterRoutes(ref IRouteBuilder routes)
-        {
-            base.RegisterRoutes(ref routes);
+            app.UseMvc567Middlewares(hostEnvironment);
+            app.UseMvc(routes =>
+            {
+                routes.RegisterMvc567Routes();
+            });
         }
     }
 }
