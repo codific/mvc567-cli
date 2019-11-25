@@ -4,7 +4,6 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 using System.Reflection;
-using Codific.Mvc567;
 using Codific.Mvc567.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,6 +39,7 @@ namespace <#=Session["ProjectName"]#>
                 config.AddMaps("<#=Session["ProjectName"]#>.Entities");
                 config.AddMaps("<#=Session["ProjectName"]#>.DataTransferObjects");
             });
+            services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddMvc567Configuration(this.Configuration);
             services.AddMvc567Views();
             services.AddMvc567FeatureProviders();

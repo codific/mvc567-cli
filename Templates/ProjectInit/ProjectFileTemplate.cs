@@ -23,26 +23,26 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
                     "coreapp3.0</TargetFramework>\n    <AspNetCoreHostingModel>InProcess</AspNetCoreHo" +
                     "stingModel>\n    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>\n    <CodeAna" +
                     "lysisRuleSet>../../Codific.ruleset</CodeAnalysisRuleSet>\n  </PropertyGroup>\n  \n " +
-                    " <ItemGroup>\n    <PackageReference Include=\"StyleCop.Analyzers\" Version=\"1.1.118" +
-                    "\" />\n  </ItemGroup>\n\n  <ItemGroup>\n    <PackageReference Include=\"AutoMapper\" Ve" +
-                    "rsion=\"9.0.0\" />\n    <PackageReference Include=\"Microsoft.AspNetCore.App\" />\n   " +
-                    " <PackageReference Include=\"Microsoft.AspNetCore.Mvc.Razor\" Version=\"2.2.0\" />\n " +
-                    "   <PackageReference Include=\"Microsoft.AspNetCore.Razor\" Version=\"2.2.0\" />\n   " +
-                    " <PackageReference Include=\"Codific.Mvc567\" Version=\"*\" />\n    <PackageReference" +
-                    " Include=\"Codific.Mvc567.Common\" Version=\"*\" />\n    <PackageReference Include=\"C" +
-                    "odific.Mvc567.CommonCore\" Version=\"*\" />\n    <PackageReference Include=\"Codific." +
-                    "Mvc567.Components\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567." +
-                    "DataAccess\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.DataAcc" +
-                    "ess.Abstractions\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.D" +
-                    "tos\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.Entities\" Vers" +
-                    "ion=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.Services\" Version=\"*\" /" +
-                    ">\n    <PackageReference Include=\"Codific.Mvc567.Services.Abstractions\" Version=\"" +
-                    "*\" />\n    <PackageReference Include=\"Codific.Mvc567.UI\" Version=\"*\" />\n    <Pack" +
-                    "ageReference Include=\"Codific.Mvc567.ViewModels\" Version=\"*\" />\n    <PackageRefe" +
-                    "rence Include=\"Microsoft.EntityFrameworkCore.Design\" Version=\"3.0.1\" />\n    <Pac" +
-                    "kageReference Include=\"Newtonsoft.Json\" Version=\"12.0.3\" />\n    <PackageReferenc" +
-                    "e Include=\"Npgsql.EntityFrameworkCore.PostgreSQL\" Version=\"3.0.1\" />\n  </ItemGro" +
-                    "up>\n  \n  \n  <ItemGroup>\n    <ProjectReference Include=\"..\\");
+                    " <ItemGroup>\n    <PackageReference Include=\"AutoMapper\" Version=\"9.0.0\" />\n    <" +
+                    "PackageReference Include=\"Microsoft.AspNetCore.App\" />\n    <PackageReference Inc" +
+                    "lude=\"Microsoft.AspNetCore.Mvc.Razor\" Version=\"2.2.0\" />\n    <PackageReference I" +
+                    "nclude=\"Microsoft.AspNetCore.Razor\" Version=\"2.2.0\" />\n    <PackageReference Inc" +
+                    "lude=\"Codific.Mvc567\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc5" +
+                    "67.Common\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.CommonCo" +
+                    "re\" Version=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.Components\" Ver" +
+                    "sion=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.DataAccess\" Version=\"*" +
+                    "\" />\n    <PackageReference Include=\"Codific.Mvc567.DataAccess.Abstractions\" Vers" +
+                    "ion=\"*\" />\n    <PackageReference Include=\"Codific.Mvc567.Dtos\" Version=\"*\" />\n  " +
+                    "  <PackageReference Include=\"Codific.Mvc567.Entities\" Version=\"*\" />\n    <Packag" +
+                    "eReference Include=\"Codific.Mvc567.Services\" Version=\"*\" />\n    <PackageReferenc" +
+                    "e Include=\"Codific.Mvc567.Services.Abstractions\" Version=\"*\" />\n    <PackageRefe" +
+                    "rence Include=\"Codific.Mvc567.UI\" Version=\"*\" />\n    <PackageReference Include=\"" +
+                    "Codific.Mvc567.ViewModels\" Version=\"*\" />\n    <PackageReference Include=\"Microso" +
+                    "ft.EntityFrameworkCore.Design\" Version=\"3.0.1\" />\n    <PackageReference Include=" +
+                    "\"Newtonsoft.Json\" Version=\"12.0.3\" />\n    <PackageReference Include=\"Npgsql.Enti" +
+                    "tyFrameworkCore.PostgreSQL\" Version=\"3.0.1\" />\n    <PackageReference Include=\"St" +
+                    "yleCop.Analyzers\" Version=\"1.1.118\" />\n  </ItemGroup>\n\n  <ItemGroup>\n    <Projec" +
+                    "tReference Include=\"..\\");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(".Entities\\");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));

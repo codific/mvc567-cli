@@ -19,10 +19,9 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
         
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
-            this.Write("using System.Reflection;\nusing Codific.Mvc567;\nusing Codific.Mvc567.Extensions;\nu" +
-                    "sing Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\nusing Mic" +
-                    "rosoft.Extensions.Configuration;\nusing Microsoft.Extensions.DependencyInjection;" +
-                    "\nusing ");
+            this.Write("using System.Reflection;\nusing Codific.Mvc567.Extensions;\nusing Microsoft.AspNetC" +
+                    "ore.Builder;\nusing Microsoft.AspNetCore.Hosting;\nusing Microsoft.Extensions.Conf" +
+                    "iguration;\nusing Microsoft.Extensions.DependencyInjection;\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(".DataAccess;\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
@@ -58,6 +57,7 @@ namespace Codific.Mvc567.Cli.Templates.ProjectInit {
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["ProjectName"]));
             this.Write(@".DataTransferObjects"");
             });
+            services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddMvc567Configuration(this.Configuration);
             services.AddMvc567Views();
             services.AddMvc567FeatureProviders();

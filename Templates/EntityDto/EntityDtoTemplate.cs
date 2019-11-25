@@ -22,8 +22,8 @@ namespace Codific.Mvc567.Cli.Templates.EntityDto {
         public virtual string TransformText() {
             this.GenerationEnvironment = null;
             this.Write("using System;\nusing AutoMapper;\nusing Codific.Mvc567.Common.Attributes;\nusing Cod" +
-                    "ific.Mvc567.Common.Enums;\nusing Codific.Mvc567.Entities.Database;\nusing Codific." +
-                    "Mvc567.Dtos.ViewModels.Abstractions;\nusing ");
+                    "ific.Mvc567.Common.Enums;\nusing Codific.Mvc567.Dtos.ViewModels.Abstractions;\nusi" +
+                    "ng Codific.Mvc567.Entities.Database;\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["EntityNamespace"]));
             this.Write(";\nusing ");
             this.Write(this.ToStringHelper.ToStringWithCulture(Session["EnumNamespace"]));
