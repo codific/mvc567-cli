@@ -35,7 +35,7 @@ namespace ");
     [Route(""admin"")]
     [ApiExplorerSettings(IgnoreApi = true)]
     [Authorize(Policy = ApplicationPermissions.AccessAdministrationPolicy)]
-    public class AdminDashboardController : AbstractController
+    public class AdminDashboardController : MvcController
     {
         public AdminDashboardController(
             IConfiguration configuration,
