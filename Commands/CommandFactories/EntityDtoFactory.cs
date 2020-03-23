@@ -175,7 +175,16 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
             {
                 foreach (var propertyDeclaration in propertyDeclarations)
                 {
-                    var propertyItem = this.ParseEntityClassProperty((PropertyDeclarationSyntax)propertyDeclaration);
+                    EntityClassProperty propertyItem;
+                    try
+                    {
+                        propertyItem = this.ParseEntityClassProperty((PropertyDeclarationSyntax)propertyDeclaration);
+                    }
+                    catch (Exception)
+                    {
+                        propertyItem = null;
+                    }
+
                     if (propertyItem != null)
                     {
                         propertiesResult.Add(propertyItem);
