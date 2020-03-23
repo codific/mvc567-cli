@@ -6,6 +6,7 @@
 <#@ import namespace="Codific.Mvc567.Cli.Commands.CommandFactories" #>
 <#@ import namespace="Codific.Mvc567.Cli.Commands.Utils" #>
 using System;
+using System.ComponentModel.DataAnnotations;
 using AutoMapper;
 using Codific.Mvc567.Common.Attributes;
 using Codific.Mvc567.Common.Enums;
@@ -27,7 +28,7 @@ namespace <#=Session["DtoNamespace"]#>
         <#= ((EntityDtoClassProperty)property).DatabaseEnumAttribute #>
 <# if (((EntityDtoClassProperty)property).ShowAttributes) { #>        <#= ((EntityDtoClassProperty)property).DetailsAttribute #>
         <#= ((EntityDtoClassProperty)property).TableViewAttribute #>
-        <#= ((EntityDtoClassProperty)property).CreateEditAttribute #><# } #>
+        <#= ((EntityDtoClassProperty)property).CreateEditAttribute #><#= ((EntityDtoClassProperty)property).RequiredAttribute #><# } #>
 
         public <#= ((EntityDtoClassProperty)property).Type #> <#= ((EntityDtoClassProperty)property).Name #> { get; set; }
 <# } #>

@@ -76,6 +76,7 @@ namespace Codific.Mvc567.Cli
             Console.WriteLine("init -n projectName");
             Console.WriteLine("vue-component -n componentName");
             Console.WriteLine("entity-dto -e entityClassName");
+            Console.WriteLine("entity-dto -a");
             Console.WriteLine("generate -j [optional] configurationJson");
             Console.WriteLine();
         }

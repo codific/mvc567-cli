@@ -85,6 +85,19 @@ namespace Codific.Mvc567.Cli.Commands.Utils
             }
         }
 
+        internal string RequiredAttribute
+        {
+            get
+            {
+                if (!this.EntityProperty.IsRequired)
+                {
+                    return string.Empty;
+                }
+
+                return $"\n        [Required]";
+            }
+        }
+
         internal string DatabaseEnumAttribute
         {
             get

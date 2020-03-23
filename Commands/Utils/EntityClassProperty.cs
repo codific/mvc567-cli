@@ -27,5 +27,7 @@ namespace Codific.Mvc567.Cli.Commands.Utils
         public bool IsEnum { get; set; }
 
         public bool IsCustomType { get; set; }
+
+        public bool IsRequired { get; set; }
     }
 }

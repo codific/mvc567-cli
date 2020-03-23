@@ -224,9 +224,11 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
 
                 var propertyAttributes = propertyDeclaration.AttributeLists;
                 bool hasForeignKey = false;
+                bool hasRequiredModifier = false;
                 foreach (var attribute in propertyAttributes)
                 {
                     hasForeignKey = attribute.ToString().Contains("ForeignKey");
+                    hasRequiredModifier = attribute.ToString().Contains("Required");
                 }
 
                 bool isCustomType = false;
@@ -238,6 +240,7 @@ namespace Codific.Mvc567.Cli.Commands.CommandFactories
                     Type = castedPropertyDeclarationTypeValue,
                     IsForeignKey = castedPropertyDeclarationTypeValue.Contains("Guid"),
                     IsEnum = !hasVirtualModifier && !hasForeignKey && isCustomType,
+                    IsRequired = hasRequiredModifier,
                     IsCustomType = isCustomType,
                 };
 
